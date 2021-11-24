@@ -333,7 +333,7 @@ const contact = async (req, res) => {
               counter-increment: tableCount;
             }
             .styled-table thead tr {
-              background-color: #6f01c6;
+              background-color: #002C9F;
               color: #ffffff;
               text-align: left;
             }
@@ -352,11 +352,11 @@ const contact = async (req, res) => {
       
             .styled-table tbody tr:last-of-type,
             .bgBorderHighlight {
-              border-bottom: 2px solid #6f01c6;
+              border-bottom: 2px solid #002C9F;
             }
             .styled-table tbody tr.active-row {
               font-weight: bold;
-              color: #6f01c6;
+              color: #002C9F;
             }
           </style>
           <title>${subject}</title>
@@ -407,7 +407,7 @@ const contact = async (req, res) => {
       to: `${
         dev
           ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com'
-          : 'Mip-elama@yandex.ru, info@mip.institute'
+          : 'npomipo@yandex.ru, info@mipo.msk.ru'
       }`,
       subject, // Subject line
       text: `

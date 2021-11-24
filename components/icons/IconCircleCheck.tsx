@@ -13,7 +13,7 @@ const IconCircleCheck = ({ calpha = false, inverse = false }) => {
         <title>Галочка</title>
         <path
           d='M8.10815 10.2701L9.45951 11.6214L12.4325 8.64844'
-          stroke='#F87E1B'
+          stroke='#3290FF'
           strokeWidth='2'
           strokeLinecap='round'
           strokeLinejoin='round'

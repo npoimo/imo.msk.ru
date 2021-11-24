@@ -30,7 +30,9 @@ const Hero = () => {
         </div>
         <TwoColumns>
           <div className={stls.left}>
-            <h1 className={stls.title}>Онлайн-институт психологии</h1>
+            <h1 className={stls.title}>
+              Московский институт <br /> профессионального <br /> образования
+            </h1>
             <h2 className={stls.desc}>
               Освойте востребованную профессию психолога или повысьте
               квалификацию вместе с нами

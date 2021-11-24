@@ -23,7 +23,7 @@ const IconMoreThan = ({
         <title>Далее</title>
         <path
           d='M1 0.5L5 4.5L1 8.5'
-          stroke='#F87E1B'
+          stroke='#3290FF'
           strokeLinecap='round'
           strokeLinejoin='round'
         />
