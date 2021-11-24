@@ -23,10 +23,10 @@ const ReviewsPage = ({ programs, reviews }) => {
       <NextSeo
         title={`Отзывы и статьи наших студентов | ${companyName}`}
         description={truncate(
-          `${reviews[reviews.length - 1].title}, ${
-            reviews[reviews.length - 1].name
-          } | ${reviews[reviews.length - 2].title}, ${
-            reviews[reviews.length - 2].name
+          `${reviews[reviews.length - 1]?.title}, ${
+            reviews[reviews.length - 1]?.name
+          } | ${reviews[reviews.length - 2]?.title}, ${
+            reviews[reviews.length - 2]?.name
           }`,
           120
         )}

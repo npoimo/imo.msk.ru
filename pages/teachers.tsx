@@ -23,7 +23,7 @@ const TeachersPage = ({ programs, teachers }) => {
       <NextSeo
         title={`Преподаватели | ${companyName}`}
         description={truncate(
-          `${teachers[0].name}, ${teachers[0].achievements} | ${teachers[1].name}, ${teachers[1].achievements}`,
+          `${teachers[0]?.name}, ${teachers[0]?.achievements} | ${teachers[1]?.name}, ${teachers[1]?.achievements}`,
           120
         )}
         canonical={`${routesFront.root}${routeTeachers}`}

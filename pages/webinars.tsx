@@ -23,10 +23,10 @@ const WebinarsPage = ({ programs, webinars }) => {
       <NextSeo
         title={`Вебинары | ${companyName}`}
         description={truncate(
-          `${webinars[webinars.length - 1].title}, ${
-            webinars[webinars.length - 1].name
-          } | ${webinars[webinars.length - 2].title}, ${
-            webinars[webinars.length - 2].name
+          `${webinars[webinars.length - 1]?.title}, ${
+            webinars[webinars.length - 1]?.name
+          } | ${webinars[webinars.length - 2]?.title}, ${
+            webinars[webinars.length - 2]?.name
           }`,
           120
         )}
