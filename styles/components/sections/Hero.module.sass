@@ -47,7 +47,7 @@
     @include m.gap($mb: f.px(35))
     font-size: f.px(15)
   @include m.media(laptop, desktop)
-    max-width: 35ch
+    max-width: 39ch
     font-size: f.px(20)
   @include m.gap($mb: f.px(30))
   font-family: Stem
@@ -72,17 +72,8 @@
       @include m.gap($mb: f.px(17))
     @include m.media(laptop, desktop)
       @include m.gap($mr: f.px(24))
-
+      
 .icon
-  @include m.media(phone, tablet)
-    position: absolute
-    top: 0
-    right: 0
-    transform: translateX(54%)
-  @include m.media(laptop, desktop)
-    display: none
-
-.iconDesktop
   @include m.media(phone, tablet)
     display: none
   @include m.media(laptop, desktop)

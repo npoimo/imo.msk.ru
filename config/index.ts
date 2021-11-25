@@ -1,4 +1,5 @@
 import base64pixel from '@/config/base64pixel'
+import companyName from '@/config/companyName'
 import gtmId from '@/config/gtmId'
 import dev from '@/config/dev'
 import prod from '@/config/prod'
@@ -9,6 +10,7 @@ import routesBack from '@/config/routesBack'
 import routesFront from '@/config/routesFront'
 
 export {
+  companyName,
   dev,
   prod,
   routesFront,

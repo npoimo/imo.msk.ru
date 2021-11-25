@@ -1,3 +1,3 @@
-const test = ''
+import TypeImg from '@/types/TypeImg'
 
-export { test }
+export type { TypeImg }

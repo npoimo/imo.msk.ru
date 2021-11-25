@@ -1,7 +1,9 @@
+import ImgTemplate from '@/components/imgs/ImgTemplate'
 import ImgDiploma1 from '@/components/imgs/diplomas/ImgDiploma1'
 import ImgDiploma from '@/components/imgs/diplomas/ImgDiploma'
 import ImgCertificate from '@/components/imgs/diplomas/ImgCertificate'
 import ImgLadyStudying from '@/components/imgs/general/ImgLadyStudying'
+import ImgLogo from '@/components/imgs/logos/ImgLogo'
 import ImgOnlinePayment from '@/components/imgs/payment/ImgOnlinePayment'
 import ImgPortrait1 from '@/components/imgs/webinars/ImgPortrait1'
 import ImgPortrait2 from '@/components/imgs/webinars/ImgPortrait2'
@@ -29,10 +31,12 @@ import ImgCta1 from '@/components/imgs/cta/ImgCta1'
 import ImgFullProgram1 from '@/components/imgs/fullprogram/ImgFullProgram1'
 
 export {
+  ImgTemplate,
   ImgDiploma1,
   ImgDiploma,
   ImgCertificate,
   ImgLadyStudying,
+  ImgLogo,
   ImgOnlinePayment,
   ImgPortrait1,
   ImgPortrait2,

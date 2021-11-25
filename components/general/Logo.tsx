@@ -1,7 +1,7 @@
 import stls from '@/styles/components/general/Logo.module.sass'
 import classNames from 'classnames'
 import Link from 'next/link'
-import { IconLogo } from '@/components/icons'
+import { ImgLogo } from '@/components/imgs'
 import { routeHome } from '@/data/routes'
 
 const Logo = ({ atHeader = false, withTitle = true }) => {
@@ -13,12 +13,12 @@ const Logo = ({ atHeader = false, withTitle = true }) => {
             [stls.logo]: true,
             [stls.atHeader]: atHeader
           })}>
-          <IconLogo withTitle={withTitle} />
+          <ImgLogo classNames={[stls.logo]} />
           {withTitle && (
             <p className={stls.title}>
-              Московский <br />
-              Институт <br />
-              Психологии
+              Московский институт <br />
+              профессионального <br />
+              образования
             </p>
           )}
         </a>

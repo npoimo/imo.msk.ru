@@ -16,7 +16,6 @@ import IconGraduateHat from '@/components/icons/IconGraduateHat'
 import IconHighIncome from '@/components/icons/IconHighIncome'
 import IconHumburger from '@/components/icons/IconHumburger'
 import IconLocation from '@/components/icons/IconLocation'
-import IconLogo from '@/components/icons/IconLogo'
 import IconLogoAlt from '@/components/icons/IconLogoAlt'
 import IconMenu from '@/components/icons/IconMenu'
 import IconMinus from '@/components/icons/IconMinus'
@@ -54,7 +53,6 @@ export {
   IconHighIncome,
   IconHumburger,
   IconLocation,
-  IconLogo,
   IconLogoAlt,
   IconMenu,
   IconMinus,

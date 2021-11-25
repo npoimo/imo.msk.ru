@@ -25,17 +25,14 @@ const Hero = () => {
     <section className={stls.container}>
       <div className={stls.bg}></div>
       <Wrapper>
-        <div className={stls.icon} onClick={e => hiddenGem(e)}>
-          <IconAtom regular crho />
-        </div>
         <TwoColumns>
           <div className={stls.left}>
             <h1 className={stls.title}>
               Московский институт <br /> профессионального <br /> образования
             </h1>
             <h2 className={stls.desc}>
-              Освойте востребованную профессию психолога или повысьте
-              квалификацию вместе с нами
+              Получи новую профессию или повысь квалификацию по своему нынешнему
+              направлению дистанционно
             </h2>
             <div className={stls.btns}>
               <div className={stls.btn}>
@@ -47,7 +44,7 @@ const Hero = () => {
             </div>
           </div>
           <div className={stls.right}>
-            <div className={stls.iconDesktop} onClick={e => hiddenGem(e)}>
+            <div className={stls.icon} onClick={e => hiddenGem(e)}>
               <IconAtom large cnu slightlyVisible />
             </div>
             <div className={stls.img}>
