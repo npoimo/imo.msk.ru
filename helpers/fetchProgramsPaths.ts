@@ -14,7 +14,7 @@ const fetchProgramsPaths = async ({ ofType }: ProgramsType) => {
   const paths = programs.map(program => ({
     params: {
       slug: program.slug,
-      studyFieldSlug: program.studyFieldSlug || 'studyfield'
+      studyFieldSlug: program.study_field?.slug || 'studyfield'
     }
   }))
 

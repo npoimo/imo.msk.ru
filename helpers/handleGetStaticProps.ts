@@ -33,7 +33,7 @@ const handleGetStaticProps = async ({
     const id = res.data.programs.filter(
       program =>
         program.slug === slug &&
-        program.studyFieldSlug === studyFieldSlug &&
+        program.study_field?.slug === studyFieldSlug &&
         program.type.toLowerCase() === type
     )[0].id
 

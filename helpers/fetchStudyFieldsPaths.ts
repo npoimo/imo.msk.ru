@@ -20,7 +20,7 @@ const fetchProgramsPaths = async (
   }
 
   const paths = programs.map(program => ({
-    params: { studyFieldSlug: program.studyFieldSlug || 'studyfield' }
+    params: { studyFieldSlug: program.study_field?.slug || 'studyfield' }
   }))
 
   return paths

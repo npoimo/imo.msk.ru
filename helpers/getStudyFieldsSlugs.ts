@@ -2,11 +2,13 @@ import { removeDuplicates } from '@/helpers/index'
 
 type getStudyFieldsSlugsType = {
   [key: string]: any
-  studyFieldSlug: string
+  study_field: {
+    slug: string
+  }
 }[]
 
 const getStudyFieldsSlugs = (programs: getStudyFieldsSlugsType) => {
-  const duplicates = programs.map(item => item.studyFieldSlug)
+  const duplicates = programs.map(item => item.study_field?.slug)
   const output = removeDuplicates(duplicates)
   return output
 }

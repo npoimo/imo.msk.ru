@@ -8,9 +8,9 @@ import { IconArrowRight } from '@/components/icons'
 const CardProfession = ({ profession = null, threerow = false }) => {
   return (
     <Link
-      href={`${routeProfessions}/${profession.studyFieldSlug || 'studyfield'}/${
-        profession.slug
-      }`}>
+      href={`${routeProfessions}/${
+        profession.study_field?.slug || 'studyfield'
+      }/${profession.slug}`}>
       <a
         className={classNames({
           [stls.container]: true,

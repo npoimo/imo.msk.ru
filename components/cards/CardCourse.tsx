@@ -8,7 +8,7 @@ import { IconArrowRight } from '@/components/icons'
 const CardCourse = ({ course = null, threerow = false }) => {
   return (
     <Link
-      href={`${routeCourses}/${course.studyFieldSlug || 'studyfield'}/${
+      href={`${routeCourses}/${course.study_field?.slug || 'studyfield'}/${
         course.slug
       }`}>
       <a
