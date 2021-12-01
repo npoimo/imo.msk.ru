@@ -1,9 +1,11 @@
-type ProgramTypeKey = 'course' | 'profession' | ''
+import { TypeCategory } from '@/types/index'
+
+type ProgramTypeKey = TypeCategory | ''
 
 type FilterProgramsProp = {
   // programs: [{ [key: string]: any; type: ProgramTypeKey }]
   programs: [{ [key: string]: any; type: ProgramTypeKey }]
-  type: 'course' | 'profession'
+  type: TypeCategory
 }
 
 const filterProgramsByType = ({
@@ -18,7 +20,8 @@ const filterProgramsByType = ({
   return (
     programs &&
     programs.filter(
-      program => program.type && program.type.toLowerCase() === type
+      program =>
+        program.category?.type && program.category?.type.toLowerCase() === type
     )
   )
 }

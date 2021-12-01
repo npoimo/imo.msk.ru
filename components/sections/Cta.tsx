@@ -23,7 +23,7 @@ type CtaType = {
 const Cta = ({ title = null, desc = null, cta }: CtaType) => {
   return (
     <section className={stls.container}>
-      <Wrapper>
+      <Wrapper classNames={[stls.wrapper]}>
         <div className={stls.img}>
           <ImgCta1 />
         </div>
@@ -32,7 +32,7 @@ const Cta = ({ title = null, desc = null, cta }: CtaType) => {
           <p className={stls.p}>{desc}</p>
         </div>
         <div className={stls.btn}>
-          <PopupTrigger btn='alpha' cta={cta} />
+          <PopupTrigger btn='gamma' cta={cta} />
         </div>
       </Wrapper>
     </section>

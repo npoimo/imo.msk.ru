@@ -4,10 +4,11 @@ import {
   getCasesRuProfessionString
 } from '@/helpers/index'
 import classNames from 'classnames'
+import { TypeCategory } from '@/types/index'
 
 type ProgramsQtuType = {
   qty: number
-  ofType: 'profession' | 'course'
+  ofType: TypeCategory
   dye?: string
 }
 

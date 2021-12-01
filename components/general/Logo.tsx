@@ -13,7 +13,7 @@ const Logo = ({ atHeader = false, withTitle = true }) => {
             [stls.logo]: true,
             [stls.atHeader]: atHeader
           })}>
-          <ImgLogo classNames={[stls.logo]} />
+          <ImgLogo classNames={[stls.img]} />
           {withTitle && (
             <p className={stls.title}>
               Московский институт <br />

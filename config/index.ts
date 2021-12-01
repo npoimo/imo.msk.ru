@@ -1,4 +1,5 @@
 import base64pixel from '@/config/base64pixel'
+import breakpoints from '@/config/breakpoints'
 import companyName from '@/config/companyName'
 import gtmId from '@/config/gtmId'
 import dev from '@/config/dev'
@@ -11,6 +12,7 @@ import routesFront from '@/config/routesFront'
 
 export {
   companyName,
+  breakpoints,
   dev,
   prod,
   routesFront,

@@ -4,9 +4,10 @@ import {
   Programs,
   ContactForm
 } from '@/components/sections'
+import { TypeCategory } from '@/types/index'
 
 type PagesProgramsType = {
-  ofType?: 'course' | 'profession'
+  ofType?: TypeCategory
 }
 
 const PagesPrograms = ({ ofType }: PagesProgramsType) => {

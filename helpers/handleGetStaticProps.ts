@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { routesBack, revalidate } from '@/config/index'
 import { convertMdToHtml } from '@/helpers/index'
+import { TypeCategory } from '@/types/index'
 
 type TypeHandleGetStaticProps = {
   page:
@@ -15,7 +16,7 @@ type TypeHandleGetStaticProps = {
     | '/programs'
   studyFieldSlug?: string
   slug?: string
-  type?: 'course' | 'profession'
+  type?: TypeCategory
 }
 
 const handleGetStaticProps = async ({
@@ -34,7 +35,7 @@ const handleGetStaticProps = async ({
       program =>
         program.slug === slug &&
         program.study_field?.slug === studyFieldSlug &&
-        program.type.toLowerCase() === type
+        program.category?.type.toLowerCase() === type
     )[0].id
 
     const programRes = await axios.get(

@@ -1,9 +1,10 @@
 import stls from '@/styles/components/layout/ProgramsFilters.module.sass'
 import StudyFields from '@/components/general/StudyFields'
 import ProgramType from '@/components/general/ProgramType'
+import { TypeCategory } from '@/types/index'
 
 type ProgramsFiltersType = {
-  ofType?: 'profession' | 'course' | null
+  ofType?: TypeCategory
   close?: any
 }
 

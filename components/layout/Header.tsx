@@ -20,6 +20,7 @@ import MenuContext from '@/context/menu/menuContext'
 import { useEffect, useContext } from 'react'
 import { handleSwipedEvt } from '@/helpers/index'
 import PopupTrigger from '@/components/general/PopupTrigger'
+import classNames from 'classnames'
 
 const Header = () => {
   const { menuIsOpen, openMenu, closeMenu, toggleMenu } =
@@ -83,9 +84,15 @@ const Header = () => {
           <div className={stls.btnFields}>
             <BtnFields />
           </div>
-          {list.map(item => (
+          {list.map((item, idx) => (
             <Link key={item.href + item.val} href={item.href}>
-              <a className={stls.link}>{item.val}</a>
+              <a
+                className={classNames([stls.link], {
+                  [stls.linkFirst]: idx === 0,
+                  [stls.linkThird]: idx === 2
+                })}>
+                {item.val}
+              </a>
             </Link>
           ))}
         </div>

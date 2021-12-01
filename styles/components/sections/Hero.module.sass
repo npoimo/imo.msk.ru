@@ -10,7 +10,7 @@
     @include m.gap($pb: f.px(35))
   @include m.media(laptop, desktop)
     overflow: visible
-    @include m.gap($pt: f.px(65, em), $pb: f.px(55))
+    @include m.gap($pt: f.px(45), $pb: f.px(55))
 
 .bg
   position: absolute
@@ -30,12 +30,16 @@
 .title
   position: relative
   @include m.media(phone, tablet)
-    max-width: 15ch
+    max-width: 18ch
     @include m.gap($mb: f.px(10))
+  @include m.media(phone)
+    font-size: f.px(27)
+  @include m.media(tablet)
+    font-size: f.px(35)
   @include m.media(laptop, desktop)
     max-width: 16ch
-    @include m.gap($mb: f.px(37))
-  font-size: f.px(42)
+    @include m.gap($mb: f.px(10))
+    font-size: f.px(42)
   font-weight: 500
   line-height: 110%
   z-index: 1
@@ -44,14 +48,14 @@
   position: relative
   @include m.media(phone, tablet)
     max-width: 33ch
-    @include m.gap($mb: f.px(35))
+    @include m.gap($mb: f.px(32))
     font-size: f.px(15)
   @include m.media(laptop, desktop)
     max-width: 39ch
     font-size: f.px(20)
-  @include m.gap($mb: f.px(30))
+    @include m.gap($mb: f.px(30))
   font-family: Stem
-  font-weight: 300
+  font-weight: 200
   line-height: 130%
   z-index: 1
 
@@ -86,7 +90,6 @@
     right: f.px(270)
     transform: rotate(10deg)
       
-
 .left
   @include m.media(laptop, desktop)
     min-width: f.px(570)

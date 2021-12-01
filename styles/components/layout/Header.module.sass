@@ -3,9 +3,12 @@
 @use '@/styles/themes/default/colors' as c
 @use '@/styles/layout/onHover' as onHover
 
+$ebp: 920px
+$esbp: 850px
+
 .container
   @include m.media(phone, tablet)
-    @include m.gap($pt: f.px(4, em), $pb: f.px(12, em))
+    @include m.gap($pt: f.px(4, em), $pb: f.px(15))
   @include m.media(laptop, desktop)
     @include m.gap($pb: f.px(32, em))
   @include m.dye(bg, c.$alpha)
@@ -51,7 +54,7 @@
 
 .phone
   display: block
-  @media screen and ( max-width: 920px )    
+  @media screen and ( max-width: $ebp )    
     display: none
   @include m.media(laptop, desktop)
     & > *
@@ -61,7 +64,7 @@
 
 .phoneNoNum
   display: none
-  @media screen and ( max-width: 920px )    
+  @media screen and ( max-width: $ebp )    
     @include m.flex($jc: center, $ai: center)
 
 .row
@@ -89,6 +92,14 @@
     @include m.dye(c, c.$nu) 
     outline: none
     @include onHover.highlightWithBottomLine($bottom: f.px(-10))
+
+.linkFirst
+  @media screen and (max-width: $ebp)
+    display: none
+
+.linkThird
+  @media screen and (max-width: $esbp)
+    display: none
 
 // .linkReviewLong
 //   @media screen and ( max-width: 860px )

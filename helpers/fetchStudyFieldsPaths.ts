@@ -1,8 +1,9 @@
 import { routesBack } from '@/config/index'
 import { filterProgramsByType } from '@/helpers/index'
+import { TypeCategory } from '@/types/index'
 
 type ProgramsType = {
-  ofType: 'course' | 'profession'
+  ofType: TypeCategory
 }
 
 const fetchProgramsPaths = async (

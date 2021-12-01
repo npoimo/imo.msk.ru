@@ -17,10 +17,10 @@ const Reviews = ({ standalone = false, reviews }: ReviewsType) => {
       title={review.title}
       photo={
         <ImgReview
-          src={review.picture[0].formats.small.url}
+          src={review.picture[0]?.formats?.small?.url}
           alt={review.name}
-          width={review.picture[0].formats.small.width}
-          height={review.picture[0].formats.small.height}
+          width={review.picture[0]?.formats?.small?.width}
+          height={review.picture[0]?.formats?.small?.height}
         />
       }
       name={review.name}

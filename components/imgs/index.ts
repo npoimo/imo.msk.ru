@@ -18,6 +18,7 @@ import ImgTeacher1 from '@/components/imgs/teachers/ImgTeacher1'
 import ImgTeacher2 from '@/components/imgs/teachers/ImgTeacher2'
 import ImgTeacher3 from '@/components/imgs/teachers/ImgTeacher3'
 import ImgTeacher4 from '@/components/imgs/teachers/ImgTeacher4'
+import ImgLogoLenovo from '@/components/imgs/trustedBy/ImgLogoLenovo'
 import ImgHeadHunter from '@/components/imgs/corporateClients/ImgHeadHunter'
 import ImgRosNeft from '@/components/imgs/corporateClients/ImgRosNeft'
 import ImgRosSeti from '@/components/imgs/corporateClients/ImgRosSeti'
@@ -51,6 +52,7 @@ export {
   ImgTeacher2,
   ImgTeacher3,
   ImgTeacher4,
+  ImgLogoLenovo,
   ImgHeadHunter,
   ImgRosNeft,
   ImgRosSeti,

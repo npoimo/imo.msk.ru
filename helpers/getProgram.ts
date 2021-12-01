@@ -1,10 +1,11 @@
 import { convertMdToHtml, filterProgramsByType } from '@/helpers/index'
+import { TypeCategory } from '@/types/index'
 
-type getProgramKey = 'course' | 'profession' | ''
+type getProgramKey = TypeCategory | ''
 
 type getProgramType = {
   data: [{ [key: string]: any; type: getProgramKey }]
-  ofType: 'course' | 'profession'
+  ofType: TypeCategory
   slug: string
 }
 

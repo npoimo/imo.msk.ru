@@ -9,9 +9,10 @@ import { useRouter } from 'next/router'
 import classNames from 'classnames'
 import { filterProgramsByStudyField } from '@/helpers/index'
 import { routeCourses, routeProfessions } from '@/data/routes'
+import { TypeCategory } from '@/types/index'
 
 type ProgramsType = {
-  ofType?: 'course' | 'profession'
+  ofType?: TypeCategory
   withTitle?: boolean
   withBtn?: boolean
   withQty?: boolean
@@ -97,7 +98,7 @@ const Programs = ({
           </div>
         )}
         <div className={stls.content}>
-          {withTitle && <h2 className={stls.title}>Наши программы</h2>}
+          {withTitle && <h2 className={stls.title}>Наши направления</h2>}
           <div className={stls.programs}>
             {ofType === 'profession' &&
               (searchTerm

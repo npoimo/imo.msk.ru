@@ -26,6 +26,7 @@ import Programs from '@/components/sections/Programs'
 import Reviews from '@/components/sections/Reviews'
 import StudyCost from '@/components/sections/StudyCost'
 import Teachers from '@/components/sections/Teachers'
+import TrustedBy from '@/components/sections/TrustedBy'
 import Webinars from '@/components/sections/Webinars'
 import WebinarsAlt from '@/components/sections/WebinarsAlt'
 import WhatYouWillLearn from '@/components/sections/WhatYouWillLearn'
@@ -63,6 +64,7 @@ export {
   Reviews,
   StudyCost,
   Teachers,
+  TrustedBy,
   Webinars,
   WebinarsAlt,
   WhatYouWillLearn,

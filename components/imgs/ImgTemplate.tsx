@@ -5,10 +5,10 @@ import { getClassNames } from '@/helpers/index'
 
 type ImgTemplateType = {
   classNames?: string[]
-  width?: number
-  height?: number
   src: StaticImageData | string
   alt: string
+  width?: number
+  height?: number
 }
 
 const ImgTemplate = ({
@@ -22,14 +22,16 @@ const ImgTemplate = ({
 
   return (
     <div className={classnames([stls.container], container)}>
-      <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        className={stls.img}
-        placeholder='blur'
-      />
+      {src && (
+        <Image
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          className={stls.img}
+          placeholder='blur'
+        />
+      )}
     </div>
   )
 }

@@ -12,6 +12,7 @@ import {
   About,
   HowProcessGoes,
   Programs,
+  TrustedBy,
   Cta,
   Reviews,
   Webinars
@@ -20,6 +21,9 @@ import {
 const HomePage = ({ programs, reviews }) => {
   const { setPrograms, setCurProgramsType, setCurProgramsStudyFieldSlug } =
     useContext(ProgramsContext)
+
+  console.log(programs)
+  console.log(reviews)
 
   useEffect(() => {
     setPrograms(programs)
@@ -42,6 +46,7 @@ const HomePage = ({ programs, reviews }) => {
       <Programs withTitle withBtn />
       <WhyBother />
       <About />
+      <TrustedBy />
       <HowProcessGoes />
       <Cta
         title={'Подберите программу'}

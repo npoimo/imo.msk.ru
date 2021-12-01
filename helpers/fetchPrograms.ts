@@ -1,8 +1,9 @@
 import { routesBack } from '@/config/index'
 import { convertMdToHtml, filterProgramsByType } from '@/helpers/index'
+import { TypeCategory } from '@/types/index'
 
 type ProgramsType = {
-  ofType: 'course' | 'profession'
+  ofType: TypeCategory
 }
 
 const fetchPrograms = async ({ ofType }: ProgramsType = { ofType: null }) => {

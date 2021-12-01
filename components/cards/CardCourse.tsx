@@ -1,37 +1,9 @@
 import stls from '@/styles/components/cards/CardCourse.module.sass'
-import Link from 'next/link'
-import { routeCourses } from '@/data/routes'
-import classNames from 'classnames'
-import ProgramStudyDuration from '@/components/program/ProgramStudyDuration'
-import { IconArrowRight } from '@/components/icons'
+import CardProgramTemplate from '@/components/cards/CardProgramTemplate'
 
 const CardCourse = ({ course = null, threerow = false }) => {
   return (
-    <Link
-      href={`${routeCourses}/${course.study_field?.slug || 'studyfield'}/${
-        course.slug
-      }`}>
-      <a
-        className={classNames({
-          [stls.container]: true,
-          [stls.threerow]: threerow,
-          [stls.fourrow]: !threerow
-        })}>
-        <span className={stls.type}>{course.typeLabel}</span>
-        <h4 className={stls.title}>{course.title}</h4>
-        {course.studyMounthsDuration && (
-          <div className={stls.dur}>
-            <ProgramStudyDuration
-              studyMounthsDuration={course.studyMounthsDuration}
-              monthsOnly
-            />
-          </div>
-        )}
-        <div className={stls.arrowRight}>
-          <IconArrowRight />{' '}
-        </div>
-      </a>
-    </Link>
+    <CardProgramTemplate program={course} threerow={threerow} type='course' />
   )
 }
 

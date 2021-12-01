@@ -16,9 +16,10 @@ import {
   Faq
 } from '@/components/sections'
 import { discount } from '@/data/price'
+import { TypeCategory } from '@/types/index'
 
 type PagesProgramType = {
-  ofType: 'course' | 'profession'
+  ofType: TypeCategory
 }
 
 const PagesProgram = ({ ofType = null }: PagesProgramType) => {

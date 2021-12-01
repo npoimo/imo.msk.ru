@@ -3,9 +3,10 @@ import Wrapper from '@/components/layout/Wrapper'
 import SwiperContainer from '@/components/general/SwiperContainer'
 import { ImgCertificate, ImgDiploma } from '@/components/imgs'
 import PopupTrigger from '@/components/general/PopupTrigger'
+import { TypeCategory } from '@/types/index'
 
 type YourDiplomaType = {
-  ofType: 'course' | 'profession'
+  ofType: TypeCategory
 }
 
 const YourDiploma = ({ ofType = null }: YourDiplomaType) => {

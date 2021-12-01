@@ -18,6 +18,7 @@ import 'nprogress/nprogress.css'
 import { prod, gtmId, routesFront } from '@/config/index'
 
 import 'swiper/css'
+import 'swiper/css/grid'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import '@/styles/app.sass'

@@ -4,10 +4,11 @@ import ProgramsContext from '@/context/programs/programsContext'
 import { BtnField } from '@/components/btns'
 import { routePrograms, routeCourses, routeProfessions } from '@/data/routes'
 import classNames from 'classnames'
+import { TypeCategory } from '@/types/index'
 
 type StudyFieldsType = {
   aside?: boolean
-  ofType?: 'course' | 'profession' | null
+  ofType?: TypeCategory
   close?: any
 }
 
