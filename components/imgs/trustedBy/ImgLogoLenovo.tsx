@@ -1,4 +1,4 @@
-import stls from '@/styles/components/imgs/reviews/ImgLogoLenovo.module.sass'
+import stls from '@/styles/components/imgs/trustedBy/ImgLogoLenovo.module.sass'
 import { TypeImg } from '@/types/index'
 import { ImgTemplate } from '@/components/imgs'
 import src from '@/public/assets/imgs/trustedBy/logo-lenovo.jpg'
