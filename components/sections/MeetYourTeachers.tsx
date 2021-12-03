@@ -5,6 +5,7 @@ import parse from 'html-react-parser'
 import PopupTrigger from '@/components/general/PopupTrigger'
 
 const MeetYourTeachers = ({ teachers }) => {
+  console.log(teachers)
   return (
     <section className={stls.container}>
       <Wrapper>
@@ -15,10 +16,10 @@ const MeetYourTeachers = ({ teachers }) => {
               <li key={teacher.name} className={stls.teacher}>
                 <div className={stls.img}>
                   <ImgTeacher
-                    src={teacher.portrait.formats.small.url}
+                    src={teacher.portrait?.formats?.small?.url}
                     alt={teacher.name}
-                    width={teacher.portrait.formats.small.width}
-                    height={teacher.portrait.formats.small.height}
+                    width={teacher.portrait?.formats?.small?.width}
+                    height={teacher.portrait?.formats?.small?.height}
                   />
                 </div>
                 <div>

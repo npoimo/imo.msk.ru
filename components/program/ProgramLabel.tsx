@@ -4,12 +4,12 @@ import { useContext } from 'react'
 
 const ProgramLabel = () => {
   const {
-    program: { typeLabel }
+    program: { category }
   } = useContext(ProgramContext)
 
   return (
     <div className={stls.container}>
-      <p className={stls.p}>{typeLabel}</p>
+      <p className={stls.p}>{category && category.label}</p>
     </div>
   )
 }

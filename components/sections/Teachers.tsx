@@ -3,13 +3,7 @@ import Wrapper from '@/components/layout/Wrapper'
 import SwiperContainer from '@/components/general/SwiperContainer'
 import CardTeacher from '@/components/cards/CardTeacher'
 import BtnDelta from '@/components/btns/BtnDelta'
-import {
-  ImgTeacher,
-  ImgTeacher1,
-  ImgTeacher2,
-  ImgTeacher3,
-  ImgTeacher4
-} from '@/components/imgs'
+import { ImgTeacher, ImgTeacher1 } from '@/components/imgs'
 import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
 import PopupTrigger from '@/components/general/PopupTrigger'
@@ -24,10 +18,10 @@ const Teachers = () => {
     teachers.map(teacher => {
       teacher.image = (
         <ImgTeacher
-          src={teacher.portrait.formats.small.url}
+          src={teacher.portrait?.formats?.small?.url}
           alt={teacher.name}
-          width={teacher.portrait.formats.small.width}
-          height={teacher.portrait.formats.small.height}
+          width={teacher.portrait?.formats?.small?.width}
+          height={teacher.portrait?.formats?.small?.height}
         />
       )
       // <ImgTeacher1 name='Иванов Иван Иванович' />

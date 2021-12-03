@@ -22,9 +22,6 @@ const HomePage = ({ programs, reviews }) => {
   const { setPrograms, setCurProgramsType, setCurProgramsStudyFieldSlug } =
     useContext(ProgramsContext)
 
-  console.log(programs)
-  console.log(reviews)
-
   useEffect(() => {
     setPrograms(programs)
     setCurProgramsType(null)

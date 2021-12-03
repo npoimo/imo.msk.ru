@@ -1,20 +1,17 @@
 import stls from '@/styles/components/imgs/webinars/ImgWebinar.module.sass'
-import Image from 'next/image'
-import { base64pixel } from '@/config/index'
+import { ImgTemplate } from '@/components/imgs'
+import { TypeImg } from '@/types/index'
+import defaultSrc from '@/public/assets/imgs/reviews/review-default.png'
 
-const ImgWebinar = ({ src, alt, width = 0, height = 0 }) => {
+const ImgWebinar = ({ classNames = [], src, alt, width, height }: TypeImg) => {
   return (
-    <div className={stls.container}>
-      <Image
-        src={src}
-        alt={alt}
-        className={stls.img}
-        width={width !== 0 && width}
-        height={height !== 0 && height}
-        placeholder='blur'
-        blurDataURL={base64pixel}
-      />
-    </div>
+    <ImgTemplate
+      classNames={classNames}
+      src={src || defaultSrc}
+      alt={alt || 'Спикер'}
+      width={width}
+      height={height}
+    />
   )
 }
 

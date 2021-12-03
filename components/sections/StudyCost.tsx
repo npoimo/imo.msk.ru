@@ -13,13 +13,7 @@ import ProgramStudyDuration from '@/components/program/ProgramStudyDuration'
 
 const StudyCost = () => {
   const {
-    program: {
-      title,
-      studyHours,
-      studyForm,
-      studyFormLabel,
-      studyMounthsDuration
-    }
+    program: { title, studyHours, study_form, studyMounthsDuration }
   } = useContext(ProgramContext)
 
   const info = [
@@ -30,7 +24,7 @@ const StudyCost = () => {
     // },
     {
       key: 'Форма обучения:',
-      val: studyForm === 'Online' ? 'Дистанционно' : studyFormLabel
+      val: study_form && study_form.label
     },
     {
       key: 'Срок обучения:',

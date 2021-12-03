@@ -1,3 +1,5 @@
+import addOptionalZeroToHours from '@/helpers/addOptionalZeroToHours'
+import addOptionalZeroToMinutes from '@/helpers/addOptionalZeroToMinutes'
 import closeFieldsTooltipOnOuterClick from '@/helpers/closeFieldsTooltipOnOuterClick'
 import convertMdToHtml from '@/helpers/convertMdToHtml'
 import fetchPrograms from '@/helpers/fetchPrograms'
@@ -29,6 +31,8 @@ import removeDuplicates from '@/helpers/removeDuplicates'
 import toNumberWithSpaces from '@/helpers/toNumberWithSpaces'
 
 export {
+  addOptionalZeroToHours,
+  addOptionalZeroToMinutes,
   closeFieldsTooltipOnOuterClick,
   getStudyFields,
   convertMdToHtml,

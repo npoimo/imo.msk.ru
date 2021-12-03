@@ -10,8 +10,6 @@ const YourResume = () => {
     program: { resumeTitle, entrySalary, resumeSkills }
   } = useContext(ProgramContext)
 
-  const list = getListItemsInnerHtml(resumeSkills)
-
   return (
     <section className={stls.container}>
       <Wrapper>
@@ -32,11 +30,11 @@ const YourResume = () => {
               </div>
             </div>
           </div>
-          <ul className={stls.list}>
-            {list &&
-              list[0].map((item, idx) => (
-                <li key={item + idx} className={stls.item}>
-                  <p className={stls.itemText}>{item}</p>
+          <ul className={stls.resumeSkills}>
+            {resumeSkills &&
+              resumeSkills.map(({ skill }, idx) => (
+                <li key={skill + idx} className={stls.skill}>
+                  <p className={stls.skillText}>{skill}</p>
                 </li>
               ))}
           </ul>

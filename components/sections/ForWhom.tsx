@@ -7,15 +7,13 @@ import {
 } from '@/components/icons'
 import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
-import { getListItemsInnerHtml } from '@/helpers/index'
 import parse from 'html-react-parser'
+import marked from 'marked'
 
 const ForWhom = () => {
   const {
-    program: { ForWhom: forWhom }
+    program: { forWhom }
   } = useContext(ProgramContext)
-
-  const list = getListItemsInnerHtml(forWhom)
 
   return (
     <section className={stls.container}>
@@ -25,9 +23,9 @@ const ForWhom = () => {
           Программа точно подойдет тем, кто хочет:
         </p>
         <ul className={stls.list}>
-          {list &&
-            list[0].map((item, idx) => (
-              <li key={item + idx} className={stls.item}>
+          {forWhom &&
+            forWhom.map(({ title, desc }, idx) => (
+              <li key={title + idx} className={stls.item}>
                 <div className={stls.icon}>
                   {idx === 0 ? (
                     <IconToTheMoon />
@@ -37,7 +35,8 @@ const ForWhom = () => {
                     <IconGettingup />
                   )}
                 </div>
-                <p className={stls.p}>{parse(item)}</p>
+                <p className={stls.p}>{parse(marked(title))}</p>
+                <p className={stls.p}>{parse(marked(desc))}</p>
               </li>
             ))}
         </ul>

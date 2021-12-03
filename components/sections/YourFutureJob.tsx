@@ -9,14 +9,11 @@ import {
 import { IconAtom } from '@/components/icons'
 import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
-import { getListItemsInnerHtml } from '@/helpers/index'
 
 const YourFutureJob = () => {
   const {
     program: { jobTitles }
   } = useContext(ProgramContext)
-
-  const list = getListItemsInnerHtml(jobTitles)
 
   return (
     <section className={stls.container}>
@@ -25,11 +22,11 @@ const YourFutureJob = () => {
         <div className={stls.content}>
           <div>
             <p className={stls.subtitle}>В результате обучения вы:</p>
-            <ul className={stls.list}>
-              {list &&
-                list[0].map((item, idx) => (
-                  <li key={item + idx} className={stls.item}>
-                    <p className={stls.p}>{item}</p>
+            <ul className={stls.jobTitles}>
+              {jobTitles &&
+                jobTitles.map(({ title }, idx) => (
+                  <li key={title + idx} className={stls.item}>
+                    <p className={stls.p}>{title}</p>
                   </li>
                 ))}
             </ul>

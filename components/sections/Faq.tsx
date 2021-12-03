@@ -3,15 +3,11 @@ import Wrapper from '@/components/layout/Wrapper'
 import FaqAnswer from '@/components/general/FaqAnswer'
 import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
-import { getListItemsInnerHtml, getParagraphInnerHtml } from '@/helpers/index'
 import PopupTrigger from '@/components/general/PopupTrigger'
-import parse from 'html-react-parser'
-import { convertMdToHtml } from '@/helpers/index'
-import marked from 'marked'
 
 const Faq = () => {
   const {
-    program: { questions, qnas }
+    program: { questions }
   } = useContext(ProgramContext)
 
   // const topics = getListItemsInnerHtml(questions)
@@ -24,13 +20,6 @@ const Faq = () => {
   //     question: title,
   //     answer: topics[idx]
   //   }))
-
-  const list =
-    qnas &&
-    qnas.map((qna, idx) => ({
-      question: qna.question,
-      answer: marked(qna.answer)
-    }))
 
   return (
     <section className={stls.container}>
@@ -48,8 +37,8 @@ const Faq = () => {
 
         <div className={stls.content}>
           <ul className={stls.list}>
-            {list &&
-              list.map(({ question, answer }, idx) => (
+            {questions &&
+              questions.map(({ question, answer }, idx) => (
                 <FaqAnswer
                   key={question + idx}
                   question={question}

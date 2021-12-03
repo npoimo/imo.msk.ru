@@ -2,6 +2,10 @@ import { getThreeLettersRuMonths, getRuDaysOfWeek } from '@/helpers/index'
 import stls from '@/styles/components/cards/CardWebinarAlt.module.sass'
 import { IconBell } from '@/components/icons'
 import CtaText from '@/components/general/CtaText'
+import {
+  addOptionalZeroToMinutes,
+  addOptionalZeroToHours
+} from '@/helpers/index'
 
 type CardWebinarAltType = {
   date: Date
@@ -10,14 +14,13 @@ type CardWebinarAltType = {
   title: string
 }
 
-// leadmip@ipo.msk.ru
-// hK8-p2T-FFs-TK8
-
 const CardWebinarAlt = ({ date, name, picture, title }: CardWebinarAltType) => {
   const newDate = new Date(date)
 
   const monhts = getThreeLettersRuMonths()
   const daysOfWeek = getRuDaysOfWeek()
+  const hours = addOptionalZeroToHours({ date: newDate })
+  const minutes = addOptionalZeroToMinutes({ date: newDate })
 
   return (
     <button className={stls.container}>
@@ -26,8 +29,7 @@ const CardWebinarAlt = ({ date, name, picture, title }: CardWebinarAltType) => {
       </div>
       <div className={stls.when}>
         <span className={stls.date}>
-          {newDate.getDate()} {monhts[newDate.getMonth()]}.,{' '}
-          {newDate.getUTCHours() + 3}:{newDate.getMinutes()}{' '}
+          {newDate.getDate()} {monhts[newDate.getMonth()]}., {hours}:{minutes}{' '}
         </span>
         <span className={stls.dayOfWeek}>{daysOfWeek[newDate.getDay()]}</span>
       </div>

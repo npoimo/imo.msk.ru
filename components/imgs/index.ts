@@ -15,9 +15,6 @@ import ImgResume1 from '@/components/imgs/resume/ImgResume1'
 import ImgReview from '@/components/imgs/reviews/ImgReview'
 import ImgTeacher from '@/components/imgs/teachers/ImgTeacher'
 import ImgTeacher1 from '@/components/imgs/teachers/ImgTeacher1'
-import ImgTeacher2 from '@/components/imgs/teachers/ImgTeacher2'
-import ImgTeacher3 from '@/components/imgs/teachers/ImgTeacher3'
-import ImgTeacher4 from '@/components/imgs/teachers/ImgTeacher4'
 import ImgLogoGasprom from '@/components/imgs/trustedBy/ImgLogoGasprom'
 import ImgLogoLenovo from '@/components/imgs/trustedBy/ImgLogoLenovo'
 import ImgLogoRosneft from '@/components/imgs/trustedBy/ImgLogoRosneft'
@@ -56,9 +53,6 @@ export {
   ImgReview,
   ImgTeacher,
   ImgTeacher1,
-  ImgTeacher2,
-  ImgTeacher3,
-  ImgTeacher4,
   ImgLogoGasprom,
   ImgLogoLenovo,
   ImgLogoRosneft,

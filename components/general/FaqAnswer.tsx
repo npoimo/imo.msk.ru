@@ -3,6 +3,7 @@ import { useState } from 'react'
 import classNames from 'classnames'
 import { IconMinus, IconPlus } from '@/components/icons'
 import parse from 'html-react-parser'
+import marked from 'marked'
 
 const FaqAnswer = ({ question = null, answer = null }) => {
   const [isOpen, setOpen] = useState(false)
@@ -17,7 +18,7 @@ const FaqAnswer = ({ question = null, answer = null }) => {
           {question}
         </p>
       </div>
-      <div className={stls.answer}>{parse(answer)}</div>
+      <div className={stls.answer}>{parse(marked(answer))}</div>
     </li>
   )
 }

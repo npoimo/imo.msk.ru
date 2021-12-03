@@ -42,18 +42,18 @@ const handleGetStaticProps = async ({
       `${routesBack.root}${routesBack.programs}/${id}`
     )
 
-    program = convertMdToHtml({
-      arr: [programRes.data],
-      params: [
-        'description',
-        'WhatYouWillLearn',
-        'ForWhom',
-        'shortContents',
-        'resumeSkills',
-        'jobTitles',
-        'questions'
-      ]
-    })[0]
+    // program = convertMdToHtml({
+    //   arr: [programRes.data],
+    //   params: [
+    //     'description',
+    //     'ForWhom.desc',
+    //     'resumeSkills',
+    //     'jobTitles',
+    //     'questions'
+    //   ]
+    // })[0]
+
+    program = programRes.data
   }
 
   return {

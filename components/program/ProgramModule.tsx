@@ -3,7 +3,7 @@ import { useState } from 'react'
 import classNames from 'classnames'
 import { IconCircleCheck, IconMinus, IconPlus } from '@/components/icons'
 
-const ProgramModule = ({ title, topics }) => {
+const ProgramModule = ({ title, ShortContentsDescs }) => {
   // const [isOpen, setOpen] = useState(false)
 
   return (
@@ -19,13 +19,13 @@ const ProgramModule = ({ title, topics }) => {
         {/* <p className={classNames({ [stls.pTitle]: true, [stls.bold]: isOpen })}> */}
         <p className={classNames({ [stls.pTitle]: true })}>{title}</p>
       </div>
-      <div className={stls.topic}>
+      <div className={stls.ShortContentsDescs}>
         <p className={stls.p}>В результате обучения вы:</p>
         {/* <ul className={stls.list}>
-          {topics &&
-            topics.map((topic, idx) => (
-              <li key={topic + idx} className={stls.item}>
-                <p className={stls.p}>{topic}</p>
+          {ShortContentsDescs &&
+            ShortContentsDescs.map((ShortContentsDescs, idx) => (
+              <li key={ShortContentsDescs.desc + idx} className={stls.item}>
+                <p className={stls.p}>{ShortContentsDescs.desc}</p>
               </li>
             ))}
         </ul> */}

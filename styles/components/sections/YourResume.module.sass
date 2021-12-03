@@ -81,14 +81,14 @@
     font-size: f.px(28)
   font-weight: 300
 
-.list
+.resumeSkills
   @include m.gap($p: 0)
   @include m.media(phone, tablet)
     list-style-type: '•'
   @include m.media(laptop, desktop)
     @include m.flex($fw: wrap, $jc: space-between)
     
-.item
+.skill
   @include m.media(phone, tablet)
     @include m.gap($pl: f.px(12))
   @include m.media(laptop, desktop)
@@ -101,8 +101,7 @@
       font-size: f.px(35)
       @include m.gap($mr: f.px(19))
 
-
-.itemText
+.skillText
   @include m.media(phone, tablet)
     font-size: f.px(15)
   @include m.media(laptop, desktop)

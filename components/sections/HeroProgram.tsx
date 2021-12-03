@@ -8,6 +8,7 @@ import ProgramContext from '@/context/program/programContext'
 import ProgramsContext from '@/context/programs/programsContext'
 import { useContext } from 'react'
 import parse from 'html-react-parser'
+import marked from 'marked'
 import PopupTrigger from '@/components/general/PopupTrigger'
 
 const HeroProgram = () => {
@@ -26,7 +27,7 @@ const HeroProgram = () => {
             </div>
             <h1 className={stls.title}>{title}</h1>
             <div className={stls.descriptionDesktop}>
-              {description && parse(description)}
+              {description && parse(marked(description))}
             </div>
             <div className={stls.btnsDesktop}>
               <PopupTrigger
