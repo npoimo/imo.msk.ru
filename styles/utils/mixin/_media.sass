@@ -1,9 +1,10 @@
 @use "sass:list"
 @use "sass:map"
+@use '@/styles/base/Breakpoints.module.sass' as bp
 
-$phone: 480px
-$tablet: 768px
-$laptop: 1200px
+$phone: bp.$phone
+$tablet: bp.$tablet
+$laptop: bp.$laptop
 
 $bkpMin: (phone: null, tablet: $phone+1, laptop: $tablet+1, desktop: $laptop+1)
 $bkpMax: (phone: $phone, tablet: $tablet, laptop: $laptop, desktop: null)

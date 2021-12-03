@@ -1,6 +1,7 @@
 @use '@/styles/utils/mixin' as m
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/colors' as c
+@use '@/styles/base/Breakpoints.module.sass' as bp
   
 // npm package: swiper
 
@@ -18,13 +19,13 @@
 
 .TrustedBy__Swiper
   overflow: visible
+  & .swiper-wrapper
+    flex-wrap: wrap
   & .swiper-pagination
     bottom: f.px(-30)
-  & .swiper-pagination-bullet-active
-    @include m.dye(bg, c.$alpha)
 
 .swiper-pagination-bullet-active
-  background-color: c.$beta
+  @include m.dye(bg, c.$alpha)
 
 // npm package: nprogress
 
