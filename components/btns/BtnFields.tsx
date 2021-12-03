@@ -12,7 +12,7 @@ const BtnFields = () => {
 
   useEffect(() => {
     closeFieldsTooltipOnOuterClick(closeFieldsTooltip)
-  }, [])
+  }, [closeFieldsTooltip])
 
   return (
     <div id='btnFieldsContainer' className={stls.container}>

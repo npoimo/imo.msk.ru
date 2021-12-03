@@ -1,7 +1,7 @@
 import About from '@/components/sections/About'
 import { handleGetStaticProps } from '@/helpers/index'
 import ProgramsContext from '@/context/programs/programsContext'
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useCallback } from 'react'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import { routesFront } from '@/config/index'
@@ -14,7 +14,7 @@ const AboutPage = ({ programs }) => {
 
   useEffect(() => {
     setPrograms(programs)
-    setCurProgramsType('profession')
+    setCurProgramsType(null)
     setCurProgramsStudyFieldSlug(null)
   }, [])
 

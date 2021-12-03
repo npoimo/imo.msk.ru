@@ -23,13 +23,13 @@ const ProgramCost = ({ withPerMonth = false }) => {
           <p className={stls.label}>Беспроцентная рассрочка на 12 месяцев</p>
           <span className={stls.discount}>
             <span className={stls.bold}>
-              {toNumberWithSpaces(perMonthPrice)}
+              {toNumberWithSpaces(perMonthPrice) || ''}
             </span>{' '}
             <span className={stls.light}>&#8381;</span>
           </span>
           <span className={stls.regular}>
             <span className={stls.bold}>
-              {toNumberWithSpaces(perMonthRPrice)}
+              {toNumberWithSpaces(perMonthRPrice) || ''}
             </span>{' '}
             <span className={stls.light}>&#8381;</span>
           </span>

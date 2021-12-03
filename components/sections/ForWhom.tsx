@@ -35,8 +35,8 @@ const ForWhom = () => {
                     <IconGettingup />
                   )}
                 </div>
-                <p className={stls.p}>{parse(marked(title))}</p>
-                <p className={stls.p}>{parse(marked(desc))}</p>
+                <div className={stls.p}>{parse(marked(title))}</div>
+                <div className={stls.p}>{parse(marked(desc))}</div>
               </li>
             ))}
         </ul>
