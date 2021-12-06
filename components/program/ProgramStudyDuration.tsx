@@ -1,21 +1,21 @@
 import { getCasedRuYearString, getCasedRuMonthString } from '@/helpers/index'
 
 type TypeProgramStudyDuration = {
-  studyMounthsDuration: number
+  studyMonthsDuration: number
   monthsOnly?: boolean
 }
 
 const ProgramStudyDuration = ({
-  studyMounthsDuration,
+  studyMonthsDuration,
   monthsOnly
 }: TypeProgramStudyDuration) => {
-  const years = Math.floor(+studyMounthsDuration / 12)
-  const months = +studyMounthsDuration - 12 * years
+  const years = Math.floor(+studyMonthsDuration / 12)
+  const months = +studyMonthsDuration - 12 * years
 
   return (
     <>
       {monthsOnly ? (
-        getCasedRuMonthString({ months: studyMounthsDuration })
+        getCasedRuMonthString({ months: studyMonthsDuration })
       ) : (
         <>
           {getCasedRuYearString({ years })} {getCasedRuMonthString({ months })}

@@ -13,7 +13,11 @@ import ProgramStudyDuration from '@/components/program/ProgramStudyDuration'
 
 const StudyCost = () => {
   const {
-    program: { title, studyHours, study_form, studyMounthsDuration }
+    program: {
+      title,
+      study_form,
+      timenprice: { studyMonthsDuration, studyHours }
+    }
   } = useContext(ProgramContext)
 
   const info = [
@@ -28,7 +32,7 @@ const StudyCost = () => {
     },
     {
       key: 'Срок обучения:',
-      val: <ProgramStudyDuration studyMounthsDuration={studyMounthsDuration} />
+      val: <ProgramStudyDuration studyMonthsDuration={studyMonthsDuration} />
     }
   ]
 

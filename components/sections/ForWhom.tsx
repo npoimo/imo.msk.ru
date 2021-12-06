@@ -13,7 +13,7 @@ import { ImgForWhom, ImgForWhomPhoneTablet } from '@/components/imgs'
 
 const ForWhom = () => {
   const {
-    program: { forWhom, heroPicture }
+    program: { forWhom, forWhomPicture }
   } = useContext(ProgramContext)
 
   return (
@@ -29,11 +29,16 @@ const ForWhom = () => {
           </div>
           <ImgForWhom
             classNames={[stls.imageLaptopDesktop]}
-            // src={heroPicture && heroPicture.url}
-            // width={heroPicture && heroPicture.width}
-            // height={heroPicture && heroPicture.height}
+            src={forWhomPicture && forWhomPicture.url}
+            width={forWhomPicture && forWhomPicture.width}
+            height={forWhomPicture && forWhomPicture.height}
           />
-          <ImgForWhomPhoneTablet classNames={[stls.imagePhoneTablet]} />
+          <ImgForWhomPhoneTablet
+            classNames={[stls.imagePhoneTablet]}
+            src={forWhomPicture && forWhomPicture.url}
+            width={forWhomPicture && forWhomPicture.width}
+            height={forWhomPicture && forWhomPicture.height}
+          />
         </div>
         <div className={stls.right}>
           <ul className={stls.list}>

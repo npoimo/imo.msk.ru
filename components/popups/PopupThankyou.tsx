@@ -21,7 +21,7 @@ const PopupThankyou = ({ close }) => {
               {
                 id: (program && program._id) || (program && program.id) || null,
                 name: (program && program.title) || null,
-                price: (program && program.price) || null,
+                price: (program && program.timenprice?.price) || null,
                 type: (program && program.category?.label) || null
               }
             ]

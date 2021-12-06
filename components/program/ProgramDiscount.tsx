@@ -14,7 +14,9 @@ const ProgramDiscount = ({
   textOnly = null
 }: TypeProgramDiscount) => {
   const {
-    program: { discount }
+    program: {
+      timenprice: { discount }
+    }
   } = useContext(ProgramContext)
 
   const elDiscount = <>{discount ? `-${discount}%` : discountStatic}</>

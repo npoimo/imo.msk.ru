@@ -34,10 +34,10 @@ const CardProgramTemplate = ({
         })}>
         <span className={stls.type}>{program.category?.label}</span>
         <h4 className={stls.title}>{program.title}</h4>
-        {program.studyMounthsDuration && (
+        {program.timenprice?.studyMonthsDuration && (
           <div className={stls.dur}>
             <ProgramStudyDuration
-              studyMounthsDuration={program.studyMounthsDuration}
+              studyMonthsDuration={program.timenprice?.studyMonthsDuration}
               monthsOnly
             />
           </div>
