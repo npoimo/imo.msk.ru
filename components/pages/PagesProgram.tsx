@@ -27,8 +27,8 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
     <>
       <HeroProgram />
       {/* <Desc /> */}
-      <WhatYouWillLearn />
       <ForWhom />
+      <WhatYouWillLearn />
       <HowProcessGoes />
       <YourDiploma ofType={ofType} />
       <BriefProgramContents />

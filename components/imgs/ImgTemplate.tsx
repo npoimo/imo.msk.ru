@@ -2,6 +2,7 @@ import stls from '@/styles/components/imgs/ImgTemplate.module.sass'
 import Image from 'next/image'
 import classnames from 'classnames'
 import { getClassNames } from '@/helpers/index'
+import { base64pixel } from '@/config/index'
 
 type ImgTemplateType = {
   classNames?: string[]
@@ -30,6 +31,7 @@ const ImgTemplate = ({
           height={height}
           className={stls.img}
           placeholder='blur'
+          blurDataURL={base64pixel}
         />
       )}
     </div>
