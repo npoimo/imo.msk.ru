@@ -15,6 +15,8 @@ import {
   StudyCost,
   Faq
 } from '@/components/sections'
+import { useContext } from 'react'
+import ProgramContext from '@/context/program/programContext'
 import { discount } from '@/data/price'
 import { TypeCategory } from '@/types/index'
 
@@ -23,6 +25,10 @@ type PagesProgramType = {
 }
 
 const PagesProgram = ({ ofType = null }: PagesProgramType) => {
+  const {
+    program: { resumeTitle, entrySalary, resumeSkills }
+  } = useContext(ProgramContext)
+
   return (
     <>
       <HeroProgram />
@@ -33,7 +39,9 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
       <YourDiploma ofType={ofType} />
       <BriefProgramContents />
       <FullProgram />
-      {ofType !== 'course' && <YourResume />}
+      {ofType !== 'course' && resumeTitle && entrySalary && resumeSkills && (
+        <YourResume />
+      )}
       <Cta
         title={'Начните обучаться со скидкой'}
         desc={`Забронируйте программу по спеццене — со скидкой ${discount.substring(

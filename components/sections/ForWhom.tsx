@@ -52,13 +52,4 @@ const ForWhom = () => {
   )
 }
 
-// {forWhom &&
-//   forWhom.map(({ title, desc }, idx) => (
-//     <li key={title + idx} className={stls.item}>
-//       <div className={stls.icon}></div>
-//       <div className={stls.p}>{parse(marked(title))}</div>
-//       <div className={stls.p}>{parse(marked(desc))}</div>
-//     </li>
-//   ))}
-
 export default ForWhom

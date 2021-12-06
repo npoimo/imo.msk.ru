@@ -1,0 +1,23 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.media(laptop, desktop)
+    @include m.flex($fd: column, $jc: center, $ai: center)
+
+.title
+  @include m.media(laptop, desktop)
+    @include m.gap($mb: f.px(10))
+    font-size: f.px(44)
+    font-weight: 500
+    line-height: 120%
+    @include m.dye(c, c.$theta)
+
+.subtitle
+  @include m.media(laptop, desktop)
+    @include m.gap($mb: f.px(54))
+    font-size: f.px(20)
+    font-weight: 200
+    line-height: 130%
+    @include m.dye(c, c.$theta)
