@@ -14,12 +14,15 @@ const ProgramDiscount = ({
   textOnly = null
 }: TypeProgramDiscount) => {
   const {
-    program: {
-      timenprice: { discount }
-    }
+    program: { timenprice }
   } = useContext(ProgramContext)
 
-  const elDiscount = <>{discount ? `-${discount}%` : discountStatic}</>
+  const elDiscount = timenprice && (
+    <>
+      {timenprice[0].discount ? `-${timenprice[0].discount}%` : discountStatic}
+    </>
+  )
+
   return (
     <>
       {textOnly ? (

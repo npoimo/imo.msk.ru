@@ -6,10 +6,12 @@ import { discount as discountStatic } from '@/data/price'
 
 const ProgramCost = ({ withPerMonth = false }) => {
   const {
-    program: {
-      timenprice: { price, discount }
-    }
+    program: { timenprice }
   } = useContext(ProgramContext)
+
+  const price = timenprice && timenprice[0].price
+  const discount = timenprice && timenprice[0].discount
+
   const rprice =
     price &&
     discount &&

@@ -12,10 +12,7 @@ import {
 
 const ProgramInfo = () => {
   const {
-    program: {
-      study_form,
-      timenprice: { studyMonthsDuration, studyHours }
-    }
+    program: { study_form, timenprice }
   } = useContext(ProgramContext)
 
   const vals = [
@@ -26,7 +23,7 @@ const ProgramInfo = () => {
     },
     {
       key: 'Количество часов:',
-      val: `${studyHours} ч`,
+      val: `${timenprice && timenprice[0].studyHours} ч`,
       icon: <IconClock />
     },
     {
@@ -36,7 +33,11 @@ const ProgramInfo = () => {
     },
     {
       key: 'Срок обучения:',
-      val: <ProgramStudyDuration studyMonthsDuration={studyMonthsDuration} />,
+      val: (
+        <ProgramStudyDuration
+          studyMonthsDuration={timenprice && timenprice[0].studyMonthsDuration}
+        />
+      ),
       icon: <IconCalendar />
     }
   ]
