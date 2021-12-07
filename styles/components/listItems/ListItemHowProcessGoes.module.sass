@@ -2,6 +2,7 @@
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/colors' as c
 @use '@/styles/utils/mixin/media' as bp
+@use '@/styles/components/sections/HowProcessGoes.module' as ebp
 
 .container
   @include m.flex
@@ -40,7 +41,7 @@
 
 .biggerLastItemCounter
   @include m.media(laptop, desktop)
-    @include m.gap($mb: f.px(26), $p: f.px(14, em))
+    @include m.gap($mr: f.px(15), $mb: f.px(26), $p: f.px(14, em))
     font-size: f.px(47)
     transform: translateX(f.px(-25))
 
@@ -51,6 +52,10 @@
   @include m.media(laptop, desktop)
     width: 100%
     @include m.flex($jc: space-between)
+
+.biggetLastItemText
+  @media screen and (min-width: ebp.$ebp)
+    display: none
 
 .title
   @include m.media(phone, tablet)

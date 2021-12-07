@@ -32,7 +32,10 @@ const ListItemHowProcessGoes = ({
         <span className={stls.number}>{idx + 1}</span>
       </div>
       {title && desc && (
-        <div className={stls.text}>
+        <div
+          className={cn(stls.text, {
+            [stls.biggetLastItemText]: biggerLastItem
+          })}>
           <h3 className={stls.title}>{title}</h3>
           <p className={stls.desc}>{desc}</p>
         </div>

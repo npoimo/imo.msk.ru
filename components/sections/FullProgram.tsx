@@ -20,7 +20,7 @@ const FullProgram = () => {
             </p>
           </div>
           <div className={stls.btn}>
-            <PopupTrigger btn='alpha' cta='submitApplication' />
+            <PopupTrigger btn='gamma' cta='submitApplication' />
           </div>
         </div>
       </Wrapper>

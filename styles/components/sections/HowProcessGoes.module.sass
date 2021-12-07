@@ -29,11 +29,14 @@ $ebp: 890px
 
 .subtitle
   @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(0))
     font-size: f.px(15)
   @include m.media(laptop, desktop)
     max-width: 31ch
+    @include m.gap($mb: f.px(30))
     font-size: f.px(20)
-  @include m.gap($mb: f.px(0))
+  @media screen and (max-width: $ebp)
+    @include m.gap($mb: f.px(30))
   font-weight: 300
 
 .br
@@ -48,3 +51,5 @@ $ebp: 890px
   @media screen and (min-width: bp.$tablet) and ( max-width: $ebp )
     max-width: f.px(630)
     @include m.gap($ml: f.px(40))
+  @media screen and (max-width: $ebp)
+    @include m.gap($mb: f.px(36))

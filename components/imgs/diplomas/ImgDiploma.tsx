@@ -1,19 +1,17 @@
 import stls from '@/styles/components/imgs/diplomas/ImgDiploma.module.sass'
-import Image from 'next/image'
+import { TypeImg } from '@/types/index'
+import { ImgTemplate } from '@/components/imgs'
 import pic from '@/public/assets/imgs/diplomas/diploma.jpg'
 
-const ImgDiploma = ({ width = 0, height = 0 }) => {
+const ImgDiploma = ({ classNames = [], width = 0, height = 0 }: TypeImg) => {
   return (
-    <div className={stls.container}>
-      <Image
-        src={pic}
-        alt='Диплом'
-        className={stls.img}
-        width={width !== 0 && width}
-        height={height !== 0 && height}
-        placeholder='blur'
-      />
-    </div>
+    <ImgTemplate
+      classNames={classNames}
+      src={pic}
+      alt='Диплом'
+      width={width}
+      height={height}
+    />
   )
 }
 

@@ -6,8 +6,13 @@
   @include m.media(laptop, desktop)
     @include m.flex($fd: column, $jc: center, $ai: center)
 
+.laptopdesktop
+  @include m.media(phone, tablet)
+    display: none
+
 .title
   @include m.media(laptop, desktop)
+    @include m.flex($jc: center, $ai: center)
     @include m.gap($mb: f.px(10))
     font-size: f.px(44)
     font-weight: 500
@@ -16,8 +21,44 @@
 
 .subtitle
   @include m.media(laptop, desktop)
+    @include m.flex($jc: center, $ai: center)
     @include m.gap($mb: f.px(54))
     font-size: f.px(20)
     font-weight: 200
     line-height: 130%
     @include m.dye(c, c.$theta)
+
+.btns
+  @include m.flex($jc: center, $ai: center)
+  @include m.gap($mb: f.px(38))
+
+.btn
+  @include m.media(phone, tablet)
+    max-width: f.px(147)
+    min-width: f.px(147) // fallback
+    min-width: initial
+
+.btn1
+  @include m.media(phone, tablet)
+    @include m.gap($mr: f.px(11))
+  @include m.media(laptop, desktop)
+    @include m.gap($mr: f.px(22))
+
+.diplomas
+  @include m.media(phone, tablet)
+    @include m.flex($fd: column)
+  @include m.media(laptop, desktop)
+    @include m.flex
+  @include m.gap($p: f.px(21))
+  box-shadow: 0 f.px(4) f.px(74) rgba(0, 0, 0, 0.05)
+  border-radius: f.px(20)
+
+.diploma
+  border-radius: f.px(6)
+  overflow: hidden
+
+.diploma1
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(14))
+  @include m.media(laptop, desktop)
+    @include m.gap($mr: f.px(20))

@@ -1,13 +1,27 @@
 import stls from '@/styles/components/general/GetDiplomaAndAccreditation.module.sass'
+import { BtnIota, BtnKappa } from '@/components/btns'
+import { ImgDiploma } from '@/components/imgs'
 
 const GetDiplomaAndAccreditation = () => {
   return (
     <div className={stls.container}>
-      <h3 className={stls.title}>Получаете диплом с аккредитацией</h3>
-      <p className={stls.subtitle}>
-        Все наши программы сертифицированы, имеют аккредитации, а дипломы
-        котируются по всему миру!
-      </p>
+      <div className={stls.laptopdesktop}>
+        <h3 className={stls.title}>Получаете диплом с аккредитацией</h3>
+        <p className={stls.subtitle}>
+          Все наши программы сертифицированы, имеют аккредитации, а дипломы
+          котируются по всему миру!
+        </p>
+      </div>
+      <div className={stls.btns}>
+        <BtnIota classNames={[stls.btn, stls.btn1]}>
+          Первая&nbsp;страница
+        </BtnIota>
+        <BtnKappa classNames={[stls.btn, stls.btn2]}>Приложение</BtnKappa>
+      </div>
+      <div className={stls.diplomas}>
+        <ImgDiploma classNames={[stls.diploma, stls.diploma1]} />
+        <ImgDiploma classNames={[stls.diploma, stls.diploma2]} />
+      </div>
     </div>
   )
 }
