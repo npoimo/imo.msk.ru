@@ -36,12 +36,14 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
       <ForWhom />
       <WhatYouWillLearn />
       <HowProcessGoes />
-      <YourDiploma ofType={ofType} />
+      {/* <YourDiploma ofType={ofType} /> */}
       <BriefProgramContents />
       <FullProgram />
       {ofType !== 'course' && resumeTitle && entrySalary && resumeSkills && (
         <YourResume />
       )}
+      {ofType !== 'course' && <YourFutureJob />}
+      <Teachers />
       <Cta
         title={'Начните обучаться со скидкой'}
         desc={`Забронируйте программу по спеццене — со скидкой ${discount.substring(
@@ -49,9 +51,7 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
         )}`}
         cta='reserve'
       />
-      <Teachers />
       {/* <HelpWithEmployment /> */}
-      {ofType !== 'course' && <YourFutureJob />}
       <StudyCost />
       <Faq />
     </>

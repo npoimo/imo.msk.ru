@@ -2,23 +2,22 @@ import stls from '@/styles/components/program/ProgramCost.module.sass'
 import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
 import toNumberWithSpaces from '@/helpers/toNumberWithSpaces'
-import { discount as discountStatic } from '@/data/price'
+import { discountNum } from '@/data/price'
 
 const ProgramCost = ({ withPerMonth = false }) => {
   const {
     program: { timenprice }
   } = useContext(ProgramContext)
 
-  const price = timenprice && timenprice[0].price
-  const discount = timenprice && timenprice[0].discount
+  const price = (timenprice && +timenprice[0].price) || 0
+  const discount = (timenprice && timenprice[0].discount) || discountNum
 
   const rprice =
-    price &&
-    discount &&
-    +price + (+price * (discount ? discount : discountStatic)) / 100
+    Math.round(Math.ceil((price / (100 - discount)) * 100) / 1000) * 1000
 
-  const perMonthPrice = Math.round(+price && price / 12)
-  const perMonthRPrice = Math.round(rprice && rprice / 12)
+  const perMonthPrice = Math.round(Math.round(price && +price / 12) / 100) * 100
+  const perMonthRPrice =
+    Math.round(Math.round(rprice && +rprice / 12) / 100) * 100
 
   return (
     <div className={stls.container}>
