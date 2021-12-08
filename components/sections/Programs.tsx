@@ -1,7 +1,6 @@
 import stls from '@/styles/components/sections/Programs.module.sass'
 import Wrapper from '@/components/layout/Wrapper'
-import Courses from '@/components/programs/Courses'
-import Professions from '@/components/programs/Professions'
+import { ProgramsProfessions, ProgramsCourses } from '@/components/programs'
 import ProgramsFilters from '@/components/layout/ProgramsFilters'
 import ProgramsContext from '@/context/programs/programsContext'
 import { useContext, useEffect } from 'react'
@@ -106,7 +105,7 @@ const Programs = ({
                   filteredData.professions.length > 0
                 : data.professions && data.professions.length > 0) && (
                 <div className={stls.professions}>
-                  <Professions
+                  <ProgramsProfessions
                     biggerTitle={!withTitle}
                     withBtn={withBtn}
                     professions={
@@ -122,7 +121,7 @@ const Programs = ({
                 ? filteredData.courses && filteredData.courses.length > 0
                 : data.courses && data.courses.length > 0) && (
                 <div className={stls.courses}>
-                  <Courses
+                  <ProgramsCourses
                     biggerTitle={!withTitle}
                     withBtn={withBtn}
                     courses={searchTerm ? filteredData.courses : data.courses}
@@ -137,7 +136,7 @@ const Programs = ({
                   filteredData.professions.length > 0
                 : data.professions && data.professions.length > 0) && (
                 <div className={stls.professions}>
-                  <Professions
+                  <ProgramsProfessions
                     biggerTitle={!withTitle}
                     withBtn={withBtn}
                     professions={
@@ -153,7 +152,7 @@ const Programs = ({
                 ? filteredData.courses && filteredData.courses.length > 0
                 : data.courses && data.courses.length > 0) && (
                 <div className={stls.courses}>
-                  <Courses
+                  <ProgramsCourses
                     biggerTitle={!withTitle}
                     withBtn={withBtn}
                     courses={searchTerm ? filteredData.courses : data.courses}

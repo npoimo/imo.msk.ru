@@ -8,15 +8,11 @@ import { TypeCategory } from '@/types/index'
 
 type ProgramsQtuType = {
   qty: number
-  ofType: TypeCategory
+  ofType?: TypeCategory
   dye?: string
 }
 
-const ProgramsQty = ({
-  qty = 0,
-  ofType = 'course',
-  dye = 'bgbeta'
-}: ProgramsQtuType) => {
+const ProgramsQty = ({ qty = 0, ofType, dye = 'bgbeta' }: ProgramsQtuType) => {
   return (
     <div className={stls.container}>
       <div className={classNames({ [stls.qty]: true, [stls[dye]]: true })}>
@@ -27,7 +23,7 @@ const ProgramsQty = ({
           ? getCasesRuProfessionString(qty)
           : ofType === 'course'
           ? getCasesRuCourseString(qty)
-          : ''}
+          : 'Программ'}
       </span>
     </div>
   )

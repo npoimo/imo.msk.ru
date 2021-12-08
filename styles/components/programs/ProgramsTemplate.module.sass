@@ -3,11 +3,8 @@
 @use '@/styles/themes/default/colors' as c
 @use '@/styles/layout/programs/programs'
 
-.container
-  @include m.media(phone, tablet)
-    @include m.gap($mb: f.px(30))
-  @include m.media(laptop, desktop)
-    @include m.gap($mb: f.px(50))
+// .container
+//   @include programs.container
 
 .heading
   @include programs.heading
@@ -30,7 +27,7 @@
 .subTitle
   @include programs.subTitle
 
-.professions
+.programs
   @include programs.programs
 
 .btn

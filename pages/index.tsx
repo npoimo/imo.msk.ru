@@ -41,10 +41,10 @@ const HomePage = ({ programs, reviews }) => {
       />
       <Hero />
       <Programs withTitle withBtn />
-      <WhyBother />
+      {/* <WhyBother /> */}
       <About />
       <TrustedBy />
-      <HowProcessGoes />
+      {/* <HowProcessGoes /> */}
       <Cta
         title={'Подберите программу'}
         desc={'Ответьте на несколько вопросов и подберите программу обучения'}
