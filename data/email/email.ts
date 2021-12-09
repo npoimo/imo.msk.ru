@@ -1,6 +1,6 @@
 const email = {
-  href: 'mailto: info@mip.institute',
-  val: 'info@mip.institute'
+  href: 'mailto: info@mipo.msk.ru',
+  val: 'info@mipo.msk.ru'
 }
 
 export default email

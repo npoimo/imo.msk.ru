@@ -2,7 +2,7 @@ const seo = {
   openGraph: {
     type: 'website',
     locale: 'ru',
-    url: 'https://mip.institute',
+    url: 'https://mipo.msk.ru',
     site_name: 'MIP'
   },
   // twitter: {
@@ -13,7 +13,7 @@ const seo = {
   defaultTitle: 'Московский Институт Психологии',
   description:
     'Освойте востребованную профессию психолога или повысьте квалификацию вместе с нами',
-  canonical: 'https://mip.institute'
+  canonical: 'https://mipo.msk.ru'
   // dangerouslySetAllPagesToNoIndex: true,
   // dangerouslySetAllPagesToNoFollow: true
   // noindex: true,
