@@ -1,3 +1,3 @@
-const gtmId = 'GTM-WQ3ZKKT'
+const gtmId = 'GTM-WZFRG65'
 
 export default gtmId
