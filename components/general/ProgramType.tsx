@@ -33,7 +33,7 @@ const ProgramType = ({ close = null }) => {
               [stls.circle]: true,
               [stls.active]: curProgramsType === 'profession'
             })}></div>
-          <span className={stls.text}>Профессия</span>
+          <span className={stls.text}>Переподготовка</span>
         </a>
       </Link>
 
@@ -44,7 +44,7 @@ const ProgramType = ({ close = null }) => {
               [stls.circle]: true,
               [stls.active]: curProgramsType === 'course'
             })}></div>
-          <span className={stls.text}>Курс</span>
+          <span className={stls.text}>Повышение квалификации</span>
         </a>
       </Link>
     </div>

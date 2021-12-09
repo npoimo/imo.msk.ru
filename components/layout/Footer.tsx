@@ -28,11 +28,11 @@ const Footer = () => {
 
   const staticLinks = [
     {
-      val: 'Курсы',
+      val: 'Повышение квалификации',
       href: routeCourses
     },
     {
-      val: 'Профессии',
+      val: 'Переподготовка',
       href: routeProfessions
     },
     {

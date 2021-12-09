@@ -21,9 +21,9 @@ const CoursesPage = ({ programs }) => {
   return (
     <>
       <NextSeo
-        title={`Курсы | ${companyName}`}
+        title={`Повышение квалификации | ${companyName}`}
         description={truncate(
-          `Курсы - короткие программы, чтобы изучить один конкретный навык`,
+          `Повышение квалификации - короткие программы, чтобы изучить один конкретный навык`,
           120
         )}
         canonical={`${routesFront.root}${routeCourses}`}

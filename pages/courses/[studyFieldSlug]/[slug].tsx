@@ -29,7 +29,7 @@ const CoursePage = ({ programs, program, studyFieldSlug }) => {
   return (
     <>
       <NextSeo
-        title={`${program.title} | Курс | ${companyName}`}
+        title={`${program.title} | Повышение квалификации | ${companyName}`}
         description={truncate(program.description, 120)}
         canonical={`${routesFront.root}${routeCourses}/${studyFieldSlug}/${program.slug}`}
       />

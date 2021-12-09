@@ -6,7 +6,7 @@ import { ImgDiploma, ImgCertificate } from '@/components/imgs'
 const Diplomas = () => {
   const list = [
     {
-      title: 'Профессия',
+      title: 'Переподготовка',
       diplomas: [
         {
           image: <ImgDiploma />,
@@ -15,7 +15,7 @@ const Diplomas = () => {
       ]
     },
     {
-      title: 'Курс',
+      title: 'Повышение квалификации',
       diplomas: [
         {
           image: <ImgCertificate />,

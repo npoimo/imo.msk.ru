@@ -27,14 +27,14 @@ const CoursesStudyFieldPage = ({ programs, studyFieldSlug }) => {
 
   const studyFieldLabel =
     studyFields.filter(studyField => studyField.slug === studyFieldSlug)[0]
-      ?.label || 'Курсы'
+      ?.label || 'Повышение квалификации'
 
   return (
     <>
       <NextSeo
-        title={`${studyFieldLabel} | Курсы | ${companyName}`}
+        title={`${studyFieldLabel} | Повышение квалификации | ${companyName}`}
         description={truncate(
-          `Курсы - короткие программы, чтобы изучить один конкретный навык`,
+          `Повышение квалификации - короткие программы, чтобы изучить один конкретный навык`,
           120
         )}
         canonical={`${routesFront.root}${routeCourses}/${studyFieldSlug}`}

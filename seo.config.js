@@ -12,7 +12,7 @@ const seo = {
   // },
   defaultTitle: 'Московский Институт Психологии',
   description:
-    'Освойте востребованную профессию психолога или повысьте квалификацию вместе с нами',
+    'Получи новую профессию или повысь квалификацию по своему нынешнему направлению дистанционно',
   canonical: 'https://mipo.msk.ru'
   // dangerouslySetAllPagesToNoIndex: true,
   // dangerouslySetAllPagesToNoFollow: true

@@ -7,7 +7,7 @@ const ImgCourse1 = ({ width = 0, height = 0 }) => {
     <div className={stls.container}>
       <Image
         src={pic}
-        alt='Курс 1'
+        alt='ПП 1'
         className={stls.img}
         width={width !== 0 && width}
         height={height !== 0 && height}

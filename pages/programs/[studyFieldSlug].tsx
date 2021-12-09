@@ -34,7 +34,7 @@ const ProgramsStudyFieldPage = ({ programs, studyFieldSlug }) => {
       <NextSeo
         title={`${studyFieldLabel} | Все направления | ${companyName}`}
         description={truncate(
-          `Профессии - длинные программы для полного погружения в направление. Курсы - короткие программы, чтобы изучить один конкретный навык`,
+          `Переподготовка - длинные программы для полного погружения в направление. Повышение квалификации - короткие программы, чтобы изучить один конкретный навык`,
           120
         )}
         canonical={`${routesFront.root}${routePrograms}/${studyFieldSlug}`}

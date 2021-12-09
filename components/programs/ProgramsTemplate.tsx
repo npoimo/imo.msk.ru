@@ -38,9 +38,9 @@ const ProgramsTemplate = ({
                 [stls.bold]: true
               })}>
               {ofType === 'course'
-                ? 'Курсы'
+                ? 'Повышение квалификации'
                 : ofType === 'profession'
-                ? 'Профессии'
+                ? 'Переподготовка'
                 : 'Программы'}
             </h2>
             {withQty && (
@@ -53,9 +53,9 @@ const ProgramsTemplate = ({
           <div className={stls.heading}>
             <h3 className={stls.title}>
               {ofType === 'course'
-                ? 'Курсы'
+                ? 'Повышение квалификации'
                 : ofType === 'profession'
-                ? 'Профессии'
+                ? 'Переподготовка'
                 : 'Программы'}
             </h3>
             {withQty && (

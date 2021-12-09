@@ -21,9 +21,9 @@ const ProfessionsPage = ({ programs }) => {
   return (
     <>
       <NextSeo
-        title={`Профессии | ${companyName}`}
+        title={`Переподготовка | ${companyName}`}
         description={truncate(
-          `Профессии - длинные программы для полного погружения в направление`,
+          `Переподготовка - длинные программы для полного погружения в направление`,
           120
         )}
         canonical={`${routesFront.root}${routeProfessions}`}
