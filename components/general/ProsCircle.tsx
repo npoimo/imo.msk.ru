@@ -11,11 +11,11 @@ const ProsCircle = () => {
       <div className={stls.top}>
         <h3 className={stls.subTitle}>ТОП 3</h3>
         <p className={stls.p}>
-          Входим в тройку лучших по направлению психология
+          Входим в тройку лучших институтов профессиональной переподготовки
         </p>
       </div>
       <div className={stls.right}>
-        <h3 className={stls.subTitle}>2000+</h3>
+        <h3 className={stls.subTitle}>3500+</h3>
         <p className={stls.p}>Студентов уже обучили</p>
       </div>
       <div className={stls.bottom}>
