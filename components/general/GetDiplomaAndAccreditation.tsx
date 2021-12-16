@@ -8,8 +8,7 @@ const GetDiplomaAndAccreditation = () => {
       <div className={stls.laptopdesktop}>
         <h3 className={stls.title}>Получаете диплом с аккредитацией</h3>
         <p className={stls.subtitle}>
-          Все наши программы сертифицированы, имеют аккредитации, а дипломы
-          котируются по всему миру!
+        Все наши дипломы являются установленного образца Министерством образования и вносятся в федеральный реестр ФИС-ФРДО
         </p>
       </div>
       <div className={stls.btns}>

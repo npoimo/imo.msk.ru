@@ -35,30 +35,30 @@ const Footer = () => {
       val: 'Переподготовка',
       href: routeProfessions
     },
-    {
-      val: 'Вебинары',
-      href: routeWebinars
-    },
-    {
-      val: 'Преподаватели',
-      href: routeTeachers
-    },
-    {
-      val: 'Отзывы',
-      href: routeReviews
-    },
+    // {
+    //   val: 'Вебинары',
+    //   href: routeWebinars
+    // },
+    // {
+    //   val: 'Преподаватели',
+    //   href: routeTeachers
+    // },
+    // {
+    //   val: 'Отзывы',
+    //   href: routeReviews
+    // },
     {
       val: 'Главная',
       href: routeHome
     },
-    {
-      val: 'Об институте',
-      href: routeAbout
-    },
-    {
-      val: 'Сведения об образовательной организации',
-      href: routeLegal
-    },
+    // {
+    //   val: 'Об институте',
+    //   href: routeAbout
+    // },
+    // {
+    //   val: 'Сведения об образовательной организации',
+    //   href: routeLegal
+    // },
     {
       val: 'Контакты',
       href: routeContact
@@ -69,11 +69,9 @@ const Footer = () => {
     }
   ]
 
-  const fieldsLinks = []
-
-  studyFields.forEach(field => {
-    fieldsLinks.push({ val: field.label, href: `/programs/${field.slug}` })
-  })
+  // const fieldsLinks = studyFields.map(field => 
+  //   ({ val: field.label, href: `/programs/${field.slug}` })
+  // )
 
   return (
     <footer className={stls.container}>
@@ -104,7 +102,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            <ul
+            {/* <ul
               className={classNames({
                 [stls.links]: true,
                 [stls.fieldsLinks]: true
@@ -127,7 +125,7 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
             <div className={stls.contact}>
               <div className={stls.numbers}>
                 <a href={number.href} className={stls.number}>
