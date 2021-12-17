@@ -3,9 +3,13 @@ import { TypeBtn } from '@/types/index'
 import cn from 'classnames'
 import getClassNames from '@/helpers/getClassNames'
 
-const BtnIota = ({ classNames = [], children }: TypeBtn) => {
+const BtnIota = ({ classNames = [], children, onClick }: TypeBtn) => {
   const container = getClassNames({ classNames })
-  return <button className={cn(stls.container, container)}>{children}</button>
+  return (
+    <button className={cn(stls.container, container)} onClick={onClick}>
+      {children}
+    </button>
+  )
 }
 
 export default BtnIota
