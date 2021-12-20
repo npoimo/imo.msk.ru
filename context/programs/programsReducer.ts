@@ -15,20 +15,26 @@ const programsReducer = (state, action) => {
 
       const professions = filterProgramsByType({ programs, type: 'profession' })
 
+      const mbas = filterProgramsByType({ programs, type: 'mba' })
+
       const studyFields = getStudyFields(programs)
 
       const studyFieldsProfessions = getStudyFields(professions)
 
       const studyFieldsCourses = getStudyFields(courses)
 
+      const studyFieldsMbas = getStudyFields(mbas)
+
       return {
         ...state,
         programs,
         courses,
         professions,
+        mbas,
         studyFields,
         studyFieldsProfessions,
-        studyFieldsCourses
+        studyFieldsCourses,
+        studyFieldsMbas
       }
     case SET_CUR_PROGRAMS_TYPE:
       return {

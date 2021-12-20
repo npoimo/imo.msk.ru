@@ -1,13 +1,17 @@
 import stls from '@/styles/components/sections/Programs.module.sass'
 import Wrapper from '@/components/layout/Wrapper'
-import { ProgramsProfessions, ProgramsCourses } from '@/components/programs'
+import {
+  ProgramsProfessions,
+  ProgramsCourses,
+  ProgramsMbas
+} from '@/components/programs'
 import ProgramsFilters from '@/components/layout/ProgramsFilters'
 import ProgramsContext from '@/context/programs/programsContext'
 import { useContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import classNames from 'classnames'
 import { filterProgramsByStudyField } from '@/helpers/index'
-import { routeCourses, routeProfessions } from '@/data/routes'
+import { routeCourses, routeMBA, routeProfessions } from '@/data/routes'
 import { TypeCategory } from '@/types/index'
 
 type ProgramsType = {
@@ -30,6 +34,7 @@ const Programs = ({
   const {
     courses,
     professions,
+    mbas,
     curProgramsStudyFieldSlug,
     filteredPrograms,
     searchTerm
@@ -51,9 +56,17 @@ const Programs = ({
       studyFieldSlug: curProgramsStudyFieldSlug
     })
 
+  const mbasFiltered =
+    curProgramsStudyFieldSlug &&
+    filterProgramsByStudyField({
+      programs: mbas,
+      studyFieldSlug: curProgramsStudyFieldSlug
+    })
+
   const data = {
     courses: curProgramsStudyFieldSlug ? coursesFiltered : courses,
-    professions: curProgramsStudyFieldSlug ? professionsFiltered : professions
+    professions: curProgramsStudyFieldSlug ? professionsFiltered : professions,
+    mbas: curProgramsStudyFieldSlug ? mbasFiltered : mbas
   }
 
   useEffect(() => {
@@ -63,6 +76,7 @@ const Programs = ({
     ofType === 'profession' &&
       data.professions.length === 0 &&
       router.replace(routeProfessions)
+    ofType === 'mba' && data.mbas.length === 0 && router.replace(routeMBA)
   }, [])
 
   const filteredProgramsIds = filteredPrograms.map(item => item.id)
@@ -76,6 +90,13 @@ const Programs = ({
       if (include) return item
     }),
     professions: data.professions.filter(item => {
+      let include = false
+      filteredProgramsIds.forEach(id => {
+        if (item.id === id) include = true
+      })
+      if (include) return item
+    }),
+    mbas: data.mbas.filter(item => {
       let include = false
       filteredProgramsIds.forEach(id => {
         if (item.id === id) include = true
@@ -130,6 +151,20 @@ const Programs = ({
                   />
                 </div>
               )}
+            {ofType === 'mba' &&
+              (searchTerm
+                ? filteredData.mbas && filteredData.mbas.length > 0
+                : data.mbas && data.mbas.length > 0) && (
+                <div className={stls.mbas}>
+                  <ProgramsMbas
+                    biggerTitle={!withTitle}
+                    withBtn={withBtn}
+                    mbas={searchTerm ? filteredData.mbas : data.mbas}
+                    withQty={withQty}
+                    threerow={threerow}
+                  />
+                </div>
+              )}
             {!ofType &&
               (searchTerm
                 ? filteredData.professions &&
@@ -162,9 +197,25 @@ const Programs = ({
                 </div>
               )}
 
+            {!ofType &&
+              (searchTerm
+                ? filteredData.mbas && filteredData.mbas.length > 0
+                : data.mbas && data.mbas.length > 0) && (
+                <div className={stls.mbas}>
+                  <ProgramsMbas
+                    biggerTitle={!withTitle}
+                    withBtn={withBtn}
+                    mbas={searchTerm ? filteredData.mbas : data.mbas}
+                    withQty={withQty}
+                    threerow={threerow}
+                  />
+                </div>
+              )}
+
             {searchTerm &&
               filteredData.courses.length === 0 &&
-              filteredData.professions.length === 0 && (
+              filteredData.professions.length === 0 &&
+              filteredData.mbas.length === 0 && (
                 <>Кажется, что по вашему запросу ничего не нашлось</>
               )}
           </div>

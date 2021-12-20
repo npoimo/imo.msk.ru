@@ -11,11 +11,13 @@
     @include m.gap($ptb: f.px(16, em), $plr: 10%)
   @include m.media(laptop, desktop)
     @include m.gap($ptb: f.px(16, em), $plr: 5%)
-  border-radius: f.px(4, em)
+  border: f.px(1) solid
+  @include m.dye(border, c.$mu)
+  border-radius: f.px(4)
   font-size: f.px(18)
-  font-weight: 500
-  @include m.dye(bg, c.$delta)
-  @include m.dye(c, c.$nu)
+  font-weight: 200
+  @include m.dye(bg, c.$nu)
+  @include m.dye(c, c.$theta)
   & > *:nth-last-child(1)
     transform: rotate(90deg)
 

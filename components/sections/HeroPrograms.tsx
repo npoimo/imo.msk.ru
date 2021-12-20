@@ -5,7 +5,6 @@ import cn from 'classnames'
 import ProgramsContext from '@/context/programs/programsContext'
 import Wrapper from '@/components/layout/Wrapper'
 import { routeCourses, routeMBA, routeProfessions } from '@/data/routes'
-import { BtnProgramsField } from '@/components/btns'
 
 const HeroPrograms = ({ ofType = null }) => {
   const { curProgramsType, curProgramsStudyFieldSlug } =
@@ -23,10 +22,10 @@ const HeroPrograms = ({ ofType = null }) => {
           <Link href={`${routeProfessions}/${slug}`}>
             <a
               className={cn([stls.link], {
-                [stls.active]:
-                  curProgramsType === null || curProgramsType === 'profession'
+                [stls.active]: curProgramsType === 'profession'
               })}>
-              Переподготовка
+              <span className={stls.laptopdesktop}>Переподготовка</span>
+              <span className={stls.phonetablet}>ПП</span>
             </a>
           </Link>
           <Link href={`${routeCourses}/${slug}`}>
@@ -34,7 +33,8 @@ const HeroPrograms = ({ ofType = null }) => {
               className={cn([stls.link], {
                 [stls.active]: curProgramsType === 'course'
               })}>
-              Повышение квалификации
+              <span className={stls.laptopdesktop}>Повышение квалификации</span>
+              <span className={stls.phonetablet}>ПК</span>
             </a>
           </Link>
           <Link href={`${routeMBA}/${slug}`}>
@@ -42,12 +42,10 @@ const HeroPrograms = ({ ofType = null }) => {
               className={cn([stls.link], {
                 [stls.active]: curProgramsType === 'mba'
               })}>
-              МБА
+              <span className={stls.laptopdesktop}>МБА</span>
+              <span className={stls.phonetablet}>MBA</span>
             </a>
           </Link>
-        </div>
-        <div className={stls.btn}>
-          <BtnProgramsField ofType={ofType} />
         </div>
       </Wrapper>
     </section>

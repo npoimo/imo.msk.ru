@@ -4,7 +4,7 @@
 
 .container
   @include m.media(phone, tablet)
-    @include m.gap($pt: f.px(40), $pb: f.px(20), $mb: f.px(31))
+    @include m.gap($pt: f.px(40), $pb: f.px(0), $mb: f.px(31))
   @include m.media(laptop, desktop)
     @include m.gap($mb: f.px(69), $pt: f.px(48), $pb: f.px(0))
     // pb 61
@@ -15,9 +15,10 @@
   @include m.media(laptop, desktop)
     @include m.flex($jc: space-between, $ai: center)
 
+    
 .title
   @include m.media(phone, tablet)
-    @include m.gap($mb: f.px(9))
+    @include m.gap($mb: f.px(28))
     font-size: f.px(36)
   @include m.media(laptop, desktop)
     @include m.gap($mb: f.px(50))
@@ -25,19 +26,34 @@
   font-weight: 500
   line-height: 110%
 
+.btn
+  @include m.media(laptop, desktop)
+    display: none
+
 .typeLinks
   @include m.gap($pb: f.px(23))
 
 .link
-  @include m.gap($mr: f.px(70), $pb: f.px(19))
+  @include m.media(phone, tablet)
+    @include m.gap($mr: f.px(38))
+  @include m.media(laptop, desktop)
+    @include m.gap($mr: f.px(70))
+  @include m.gap($pb: f.px(19))
   border-bottom: f.px(4) solid transparent
+  @include m.media(phone, tablet)
+  @include m.media(laptop, desktop)
   font-size: f.px(24)
   font-weight: 300
   line-height: 120%
-  @include m.dye(c, c.$nu)
+  @include m.dye(c, rgba(c.$nu, .4))
   &.active
+    @include m.dye(c, c.$nu)
     @include m.dye(border, c.$beta)
 
-.btn
+.phonetablet
   @include m.media(laptop, desktop)
+    display: none
+
+.laptopdesktop
+  @include m.media(phone, tablet)
     display: none

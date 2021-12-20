@@ -27,7 +27,7 @@ const BtnProgramsField = ({ ofType = null }) => {
                   : ''
               )}
         </span>
-        <IconMoreThan cnu />
+        <IconMoreThan ctheta />
       </button>
       <div
         className={classNames({
