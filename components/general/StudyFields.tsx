@@ -2,7 +2,12 @@ import stls from '@/styles/components/general/StudyFields.module.sass'
 import { Fragment, useContext } from 'react'
 import ProgramsContext from '@/context/programs/programsContext'
 import { BtnField } from '@/components/btns'
-import { routePrograms, routeCourses, routeProfessions } from '@/data/routes'
+import {
+  routePrograms,
+  routeCourses,
+  routeProfessions,
+  routeMBA
+} from '@/data/routes'
 import classNames from 'classnames'
 import { TypeCategory } from '@/types/index'
 
@@ -49,6 +54,8 @@ const StudyFields = ({
                       ? routeCourses
                       : curProgramsType === 'profession'
                       ? routeProfessions
+                      : curProgramsType === 'mba'
+                      ? routeMBA
                       : routePrograms
                     : routePrograms
                 }
@@ -65,6 +72,8 @@ const StudyFields = ({
                     ? routeCourses
                     : curProgramsType === 'profession'
                     ? routeProfessions
+                    : curProgramsType === 'mba'
+                    ? routeMBA
                     : routePrograms
                   : routePrograms
               }/${slug}`}
