@@ -10,22 +10,28 @@ const ProsCircle = () => {
       </div>
       <div className={stls.top}>
         <h3 className={stls.subTitle}>12 лет</h3>
-        <p className={stls.p}>
-          Занимаемся <br />
-          образованием
-        </p>
+        <p className={stls.p}>Занимаемся образованием</p>
       </div>
       <div className={stls.right}>
         <h3 className={stls.subTitle}>2500+</h3>
-        <p className={stls.p}>Учаться прямо сейчас</p>
+        <p className={stls.p}>
+          Учаться
+          <br /> прямо сейчас
+        </p>
       </div>
       <div className={stls.bottom}>
         <h3 className={stls.subTitle}>8 лет</h3>
-        <p className={stls.p}>специализируемся на дистанционном обучении</p>
+        <p className={stls.p}>
+          специализируемся <br />
+          на дистанционном обучении
+        </p>
       </div>
       <div className={stls.left}>
-        <h3 className={stls.subTitle}>{'>'}17 000</h3>
-        <p className={stls.p}>Студентов уже обучили</p>
+        <h3 className={stls.subTitle}>{'>'}17000</h3>
+        <p className={stls.p}>
+          Студентов <br />
+          уже обучили
+        </p>
       </div>
     </div>
   )

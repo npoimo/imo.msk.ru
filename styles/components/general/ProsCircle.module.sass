@@ -33,65 +33,65 @@
 
 .top
   position: absolute
-  top: 5%
-  @include m.media(phone)
-    left: 54%
-    max-width: 11ch
-  @include m.media(tablet)
-    left: 56%
-    max-width: 11ch
-  @include m.media(laptop, desktop)
-    left: 56%
-    max-width: 22ch
+  top: 10%
+  @include m.media(phone, tablet)
+    left: 59%
+  @include m.media(laptop)
+    left: 55%
+  @include m.media(desktop)
+    left: 57%
+  max-width: 19ch
   transform: translateX(-50%)
 
 .right
   position: absolute
   top: 50%
-  @include m.media(phone)
-    right: 4%
-    max-width: 8ch
-  @include m.media(tablet)
-    right: 0
-    max-width: 8ch
-  @include m.media(laptop, desktop)
-    right: 2%
-    max-width: 16ch
+  right: 5%
+  max-width: 16ch
   transform: translateY(-50%)
 
 .bottom
-  @include m.media(phone, tablet)
-    max-width: 10ch
-  @include m.media(laptop, desktop)
-    max-width: 18ch
   position: absolute
-  bottom: 7%
-  left: 54%
+  bottom: 9%
+  @include m.media(phone, tablet)
+    left: 59%
+  @include m.media(laptop)
+    left: 54%
+  @include m.media(desktop)
+    left: 55%
+  max-width: 18ch
   transform: translateX(-50%)
 
 .left
-  @include m.media(phone, tablet)
-    max-width: 9ch
-  @include m.media(laptop, desktop)
-    max-width: 15ch
   position: absolute
-  top: 50%
-  left: 5%
+  top: 52%
+  @include m.media(phone)
+    left: 6%
+  @include m.media(tablet)
+    left: 8%
+  @include m.media(laptop)
+    left: 6%
+  @include m.media(desktop)
+    left: 5%
+  max-width: 17ch
   transform: translateY(-50%)
 
 
 .subTitle
   @include m.gap($mb: f.px(3))
   @include m.media(phone, tablet)
-    font-size: f.px(24)
+    font-size: f.px(21)
   @include m.media(laptop, desktop)
-    font-size: f.px(48)
+    font-size: f.px(43)
   font-weight: 500
+  line-height: 120%
 
 .p
   @include m.gap($mb: 0)
   @include m.media(phone, tablet)
-    font-size: f.px(14)
+    font-size: f.px(13)
   @include m.media(laptop, desktop)
     font-size: f.px(18)
+  font-weight: 200
+  line-height: 120%
 
