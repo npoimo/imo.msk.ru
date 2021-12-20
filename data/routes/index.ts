@@ -8,6 +8,7 @@ const routeContact = '/contact'
 const routePrograms = '/programs'
 const routeCourses = '/courses'
 const routeProfessions = '/professions'
+const routeMBA = '/mba'
 const routePayment = '/payment'
 const routePoliciesPrivacy = '/policies/privacy.pdf'
 const routePoliciesTerms = '/policies/terms.pdf'
@@ -23,6 +24,7 @@ export {
   routePrograms,
   routeCourses,
   routeProfessions,
+  routeMBA,
   routePayment,
   routePoliciesPrivacy,
   routePoliciesTerms

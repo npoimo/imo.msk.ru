@@ -2,7 +2,7 @@ import { routesBack } from '@/config/index'
 import axios from 'axios'
 
 type TypeHandleGetStaticPathsPrograms = {
-  type: '/course' | '/profession' | ''
+  type: '/course' | '/profession' | '/mba' | ''
 }
 
 const handleGetStaticPathsPrograms = async (

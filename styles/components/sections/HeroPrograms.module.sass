@@ -6,7 +6,7 @@
   @include m.media(phone, tablet)
     @include m.gap($pt: f.px(40), $pb: f.px(20), $mb: f.px(31))
   @include m.media(laptop, desktop)
-    @include m.gap($mb: f.px(62), $pt: f.px(48), $pb: f.px(41))
+    @include m.gap($mb: f.px(69), $pt: f.px(48), $pb: f.px(0))
     // pb 61
   @include m.dye(bg, c.$alpha)
   @include m.dye(c, c.$nu)
@@ -20,10 +20,23 @@
     @include m.gap($mb: f.px(9))
     font-size: f.px(36)
   @include m.media(laptop, desktop)
-    @include m.gap($mb: 0)
+    @include m.gap($mb: f.px(50))
     font-size: f.px(64)
   font-weight: 500
   line-height: 110%
+
+.typeLinks
+  @include m.gap($pb: f.px(23))
+
+.link
+  @include m.gap($mr: f.px(70), $pb: f.px(19))
+  border-bottom: f.px(4) solid transparent
+  font-size: f.px(24)
+  font-weight: 300
+  line-height: 120%
+  @include m.dye(c, c.$nu)
+  &.active
+    @include m.dye(border, c.$beta)
 
 .btn
   @include m.media(laptop, desktop)
