@@ -3,7 +3,12 @@ import ProgramsContext from '@/context/programs/programsContext'
 import { useContext } from 'react'
 import classNames from 'classnames'
 import Link from 'next/link'
-import { routeProfessions, routeCourses, routePrograms } from '@/data/routes'
+import {
+  routeProfessions,
+  routeCourses,
+  routePrograms,
+  routeMBA
+} from '@/data/routes'
 
 const ProgramType = ({ close = null }) => {
   const { curProgramsType, curProgramsStudyFieldSlug } =
@@ -45,6 +50,17 @@ const ProgramType = ({ close = null }) => {
               [stls.active]: curProgramsType === 'course'
             })}></div>
           <span className={stls.text}>Повышение квалификации</span>
+        </a>
+      </Link>
+
+      <Link href={`${routeMBA}/${slug}`}>
+        <a className={stls.item} onClick={close && close}>
+          <div
+            className={classNames({
+              [stls.circle]: true,
+              [stls.active]: curProgramsType === 'mba'
+            })}></div>
+          <span className={stls.text}>MBA</span>
         </a>
       </Link>
     </div>

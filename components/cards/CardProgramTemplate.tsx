@@ -1,6 +1,11 @@
 import stls from '@/styles/components/cards/CardProgramTemplate.module.sass'
 import Link from 'next/link'
-import { routeProfessions, routeCourses, routePrograms } from '@/data/routes'
+import {
+  routeProfessions,
+  routeCourses,
+  routePrograms,
+  routeMBA
+} from '@/data/routes'
 import classNames from 'classnames'
 import ProgramStudyDuration from '@/components/program/ProgramStudyDuration'
 import { IconArrowRight } from '@/components/icons'
@@ -24,6 +29,8 @@ const CardProgramTemplate = ({
           ? routeProfessions
           : type === 'course'
           ? routeCourses
+          : type === 'mba'
+          ? routeMBA
           : program.category?.slug || routePrograms
       }/${program.study_field?.slug || 'studyfield'}/${program.slug}`}>
       <a

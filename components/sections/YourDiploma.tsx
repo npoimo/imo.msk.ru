@@ -13,8 +13,8 @@ const YourDiploma = ({ ofType = null }: YourDiplomaType) => {
   const slides = []
 
   ofType === 'profession' && slides.push(<ImgDiploma key='diploma' />)
-
   ofType === 'course' && slides.push(<ImgCertificate key='certificate' />)
+  ofType === 'mba' && slides.push(<ImgDiploma key='diploma' />)
 
   const mobileSwiperOptions = {
     slidesNum: 2,

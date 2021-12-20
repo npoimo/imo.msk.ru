@@ -42,7 +42,7 @@ const HeroPrograms = ({ ofType = null }) => {
               className={cn([stls.link], {
                 [stls.active]: curProgramsType === 'mba'
               })}>
-              <span className={stls.laptopdesktop}>МБА</span>
+              <span className={stls.laptopdesktop}>MBA</span>
               <span className={stls.phonetablet}>MBA</span>
             </a>
           </Link>

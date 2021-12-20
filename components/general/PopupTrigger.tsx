@@ -29,6 +29,7 @@ type PopupTriggerType = {
     | 'callMeBack'
     | 'signUpForCourse'
     | 'signUpForProfession'
+    | 'sighUpForMBA'
     | 'signUp'
     | 'chooseProgram'
     | 'learnAboutUs'
@@ -55,6 +56,8 @@ const PopupTrigger = ({ btn, cta }: PopupTriggerType) => {
         ? 'Записаться на ПК'
         : cta === 'signUpForProfession'
         ? 'Записаться на переподготовку'
+        : cta === 'sighUpForMBA'
+        ? 'Записаться на MBA'
         : cta === 'signUp'
         ? 'Записаться'
         : cta === 'chooseProgram'
@@ -87,6 +90,8 @@ const PopupTrigger = ({ btn, cta }: PopupTriggerType) => {
         ? 'Записаться на ПК'
         : cta === 'signUpForProfession'
         ? 'Записаться на переподготовку'
+        : cta === 'sighUpForMBA'
+        ? 'Записаться на MBA'
         : cta === 'signUp'
         ? 'Записаться'
         : cta === 'chooseProgram'
@@ -130,6 +135,12 @@ const PopupTrigger = ({ btn, cta }: PopupTriggerType) => {
           минут!
         </>
       ) : cta === 'signUpForProfession' ? (
+        <>
+          У Вас есть вопросы? Оставьте заявку!{' '}
+          <br className={stls.phonetablet} /> И мы перезвоним Вам в течение 5
+          минут!
+        </>
+      ) : cta === 'sighUpForMBA' ? (
         <>
           У Вас есть вопросы? Оставьте заявку!{' '}
           <br className={stls.phonetablet} /> И мы перезвоним Вам в течение 5
@@ -209,6 +220,8 @@ const PopupTrigger = ({ btn, cta }: PopupTriggerType) => {
         ? 'Записаться на ПК'
         : cta === 'signUpForProfession'
         ? 'Записаться на переподготовку'
+        : cta === 'sighUpForMBA'
+        ? 'Записаться на MBA'
         : cta === 'signUp'
         ? 'Записаться'
         : cta === 'chooseProgram'
