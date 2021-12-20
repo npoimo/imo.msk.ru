@@ -22,10 +22,12 @@
 .subtitle
   @include m.media(laptop, desktop)
     @include m.flex($jc: center, $ai: center)
+    max-width: 63ch
     @include m.gap($mb: f.px(54))
     font-size: f.px(20)
     font-weight: 200
     line-height: 130%
+    text-align: center
     @include m.dye(c, c.$theta)
 
 .btns
