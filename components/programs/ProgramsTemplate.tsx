@@ -2,7 +2,12 @@ import stls from '@/styles/components/programs/ProgramsTemplate.module.sass'
 import cn from 'classnames'
 import { TypeClassNames, TypeCategory } from '@/types/index'
 import { getClassNames } from '@/helpers/index'
-import { routeCourses, routeProfessions, routePrograms } from '@/data/routes'
+import {
+  routeCourses,
+  routeMBA,
+  routeProfessions,
+  routePrograms
+} from '@/data/routes'
 import { BtnDelta } from '@/components/btns'
 import CardProgramTemplate from '@/components/cards/CardProgramTemplate'
 import ProgramsQty from '@/components/general/ProgramsQty'
@@ -41,6 +46,8 @@ const ProgramsTemplate = ({
                 ? 'Повышение квалификации'
                 : ofType === 'profession'
                 ? 'Переподготовка'
+                : ofType === 'mba'
+                ? 'MBA'
                 : 'Программы'}
             </h2>
             {withQty && (
@@ -56,6 +63,8 @@ const ProgramsTemplate = ({
                 ? 'Повышение квалификации'
                 : ofType === 'profession'
                 ? 'Переподготовка'
+                : ofType === 'mba'
+                ? 'MBA'
                 : 'Программы'}
             </h3>
             {withQty && (
@@ -74,6 +83,8 @@ const ProgramsTemplate = ({
                   ? 'Короткие программы, чтобы изучить один конкретный навык'
                   : ofType === 'profession'
                   ? 'Длинные программы для полного погружения в направление'
+                  : ofType === 'mba'
+                  ? 'MBA'
                   : ''}
               </p>
             )}
@@ -112,6 +123,8 @@ const ProgramsTemplate = ({
                 ? 'курсы'
                 : ofType === 'profession'
                 ? 'профессии'
+                : ofType === 'mba'
+                ? 'MBA'
                 : 'программы'
             }`}
             href={
@@ -119,6 +132,8 @@ const ProgramsTemplate = ({
                 ? routeCourses
                 : ofType === 'profession'
                 ? routeProfessions
+                : ofType === 'mba'
+                ? routeMBA
                 : routePrograms
             }
           />

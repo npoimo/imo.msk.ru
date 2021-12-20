@@ -23,7 +23,7 @@ const ProgramsMbas = ({
       programs={mbas}
       withQty={withQty}
       threerow={threerow}
-      ofType='course'
+      ofType='mba'
     />
   )
 }
