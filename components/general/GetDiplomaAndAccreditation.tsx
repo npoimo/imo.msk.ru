@@ -1,7 +1,12 @@
 import stls from '@/styles/components/general/GetDiplomaAndAccreditation.module.sass'
 import { useState } from 'react'
 import { BtnIota, BtnKappa } from '@/components/btns'
-import { ImgDiploma } from '@/components/imgs'
+import {
+  ImgDiploma,
+  ImgApplication,
+  ImgSupplement,
+  ImgSupplementBack
+} from '@/components/imgs'
 
 const GetDiplomaAndAccreditation = () => {
   const [isSupplement, setIsSupplement] = useState(false)
@@ -47,13 +52,13 @@ const GetDiplomaAndAccreditation = () => {
       <div className={stls.diplomas}>
         {isSupplement ? (
           <>
-            <ImgDiploma classNames={[stls.diploma, stls.diploma1]} />
-            <ImgDiploma classNames={[stls.diploma, stls.diploma2]} />
+            <ImgSupplement classNames={[stls.diploma, stls.diploma1]} />
+            <ImgSupplementBack classNames={[stls.diploma, stls.diploma2]} />
           </>
         ) : (
           <>
             <ImgDiploma classNames={[stls.diploma, stls.diploma1]} />
-            <ImgDiploma classNames={[stls.diploma, stls.diploma2]} />
+            <ImgApplication classNames={[stls.diploma, stls.diploma2]} />
           </>
         )}
       </div>

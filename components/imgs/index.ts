@@ -1,6 +1,9 @@
 import ImgTemplate from '@/components/imgs/ImgTemplate'
+import ImgApplication from '@/components/imgs/diplomas/ImgApplication'
 import ImgDiploma1 from '@/components/imgs/diplomas/ImgDiploma1'
 import ImgDiploma from '@/components/imgs/diplomas/ImgDiploma'
+import ImgSupplement from '@/components/imgs/diplomas/ImgSupplement'
+import ImgSupplementBack from '@/components/imgs/diplomas/ImgSupplementBack'
 import ImgForWhom from '@/components/imgs/forWhom/ImgForWhom'
 import ImgForWhomPhoneTablet from '@/components/imgs/forWhom/ImgForWhomPhoneTablet'
 import ImgCertificate from '@/components/imgs/diplomas/ImgCertificate'
@@ -39,8 +42,11 @@ import ImgFullProgram1 from '@/components/imgs/fullprogram/ImgFullProgram1'
 
 export {
   ImgTemplate,
+  ImgApplication,
   ImgDiploma1,
   ImgDiploma,
+  ImgSupplement,
+  ImgSupplementBack,
   ImgForWhom,
   ImgForWhomPhoneTablet,
   ImgCertificate,

@@ -50,7 +50,7 @@
   @include m.media(phone, tablet)
     @include m.flex($fd: column)
   @include m.media(laptop, desktop)
-    @include m.flex
+    @include m.flex($ai: flex-start)
   @include m.gap($p: f.px(21))
   box-shadow: 0 f.px(4) f.px(74) rgba(0, 0, 0, 0.05)
   border-radius: f.px(20)
