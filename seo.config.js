@@ -2,18 +2,17 @@ const seo = {
   openGraph: {
     type: 'website',
     locale: 'ru',
-    url: 'https://mipo.msk.ru',
-    site_name: 'MIP'
+    url: 'https://imo.msk.ru',
+    site_name: 'ИМО'
   },
   // twitter: {
   //   handle: '@handle',
   //   site: '@site',
   //   cardType: 'summary_large_image',
   // },
-  defaultTitle: 'Московский Институт Психологии',
-  description:
-    'Получи новую профессию или повысь квалификацию по своему нынешнему направлению дистанционно',
-  canonical: 'https://mipo.msk.ru'
+  defaultTitle: 'Институт Медицинского Образования',
+  description: 'Добро пожаловать в Институт Медицинского Образования',
+  canonical: 'https://imo.msk.ru'
   // dangerouslySetAllPagesToNoIndex: true,
   // dangerouslySetAllPagesToNoFollow: true
   // noindex: true,

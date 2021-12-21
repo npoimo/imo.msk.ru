@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://mipo.msk.ru',
+  siteUrl: 'https://imo.msk.ru',
   changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 5000,

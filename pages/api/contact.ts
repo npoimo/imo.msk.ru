@@ -135,7 +135,7 @@ const contact = async (req, res) => {
     utmTerm: (utms && utms.utm_term) || null
   }
 
-  const subject = 'Новая заявка с mipo.msk.ru'
+  const subject = 'Новая заявка с imo.msk.ru'
 
   const createEmailBody = () => {
     const createTr = (item, idx) => {
@@ -403,11 +403,11 @@ const contact = async (req, res) => {
 
   try {
     const emailRes = await transporter.sendMail({
-      from: 'lead@mipo.msk.ru',
+      from: 'lead@imo.msk.ru',
       to: `${
         dev
           ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com'
-          : 'npomipo@yandex.ru, info@mipo.msk.ru'
+          : 'npoimo@yandex.ru, info@imo.msk.ru'
       }`,
       subject, // Subject line
       text: `
