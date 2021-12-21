@@ -42,9 +42,9 @@ const IconAtom = ({
           />
           {withCircles && (
             <>
-              <circle cx='205' cy='132' r='11' fill='#3290FF' />
+              <circle cx='205' cy='132' r='11' fill='#5FAED4' />
               <circle cx='21' cy='130' r='10' fill='#6F01C6' />
-              <circle cx='40' cy='87' r='3' fill='#3290FF' />
+              <circle cx='40' cy='87' r='3' fill='#5FAED4' />
             </>
           )}
         </g>

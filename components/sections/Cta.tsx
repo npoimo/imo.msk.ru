@@ -32,7 +32,7 @@ const Cta = ({ title = null, desc = null, cta }: CtaType) => {
           <p className={stls.p}>{desc}</p>
         </div>
         <div className={stls.btn}>
-          <PopupTrigger btn='gamma' cta={cta} />
+          <PopupTrigger btn='alpha' cta={cta} />
         </div>
       </Wrapper>
     </section>

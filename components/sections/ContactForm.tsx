@@ -16,7 +16,7 @@ const ContactForm = () => {
             Ответьте на несколько вопросов и подберите программу обучения
           </p>
           <div className={stls.form}>
-            <FormAlpha />
+            <FormAlpha atPagesPrograms />
           </div>
         </div>
       </Wrapper>

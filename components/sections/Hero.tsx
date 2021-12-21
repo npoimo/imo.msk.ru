@@ -28,7 +28,7 @@ const Hero = () => {
         <TwoColumns>
           <div className={stls.left}>
             <h1 className={stls.title}>
-              Московский институт <br /> профессионального <br /> образования
+              Институт <br /> медицинского <br /> образования
             </h1>
             <h2 className={stls.desc}>
               Получи новую профессию или повысь квалификацию по своему нынешнему

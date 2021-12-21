@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Popup from 'reactjs-popup'
 import { useForm } from 'react-hook-form'
 import hitContactRoute from '@/components/funcs/hitContactRoute'
-import { BtnAlpha, BtnBeta } from '@/components/btns'
+import { BtnAlpha, BtnBeta, BtnGamma } from '@/components/btns'
 import classNames from 'classnames'
 import { PopupThankyou } from '@/components/popups'
 
@@ -20,6 +20,7 @@ const FormAlpha = ({
   question = false,
   popup = false,
   atFooter = false,
+  atPagesPrograms = false,
   agreement = false
 }) => {
   const {
@@ -126,6 +127,8 @@ const FormAlpha = ({
           <div className={stls.btn}>
             {atFooter ? (
               <BtnBeta text={cta} isDisabled={isDisabled} />
+            ) : atPagesPrograms ? (
+              <BtnGamma text={cta} isDisabled={isDisabled} />
             ) : (
               <BtnAlpha text={cta} isDisabled={isDisabled} />
             )}

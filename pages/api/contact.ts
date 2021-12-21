@@ -333,7 +333,7 @@ const contact = async (req, res) => {
               counter-increment: tableCount;
             }
             .styled-table thead tr {
-              background-color: #002C9F;
+              background-color: #0073A9;
               color: #ffffff;
               text-align: left;
             }
@@ -352,11 +352,11 @@ const contact = async (req, res) => {
       
             .styled-table tbody tr:last-of-type,
             .bgBorderHighlight {
-              border-bottom: 2px solid #002C9F;
+              border-bottom: 2px solid #0073A9;
             }
             .styled-table tbody tr.active-row {
               font-weight: bold;
-              color: #002C9F;
+              color: #0073A9;
             }
           </style>
           <title>${subject}</title>

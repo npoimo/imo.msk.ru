@@ -16,9 +16,7 @@ const Logo = ({ atHeader = false, withTitle = true }) => {
           <ImgLogo classNames={[stls.img]} />
           {withTitle && (
             <p className={stls.title}>
-              Московский институт <br />
-              профессионального <br />
-              образования
+              Институт <br /> медицинского <br /> образования
             </p>
           )}
         </a>
