@@ -45,8 +45,8 @@ const ForWhom = () => {
             {forWhom &&
               forWhom.map(({ title, desc }, idx) => (
                 <li key={title + idx} className={stls.item}>
-                  <div className={stls.itemTitle}>{parse(marked(title))}</div>
-                  <div className={stls.itemDesc}>{parse(marked(desc))}</div>
+                  <div className={stls.itemTitle}>{title && parse(marked(title))}</div>
+                  <div className={stls.itemDesc}>{desc && parse(marked(desc))}</div>
                   {forWhom[idx + 1] && <div className={stls.divider}></div>}
                 </li>
               ))}

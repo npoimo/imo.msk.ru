@@ -18,7 +18,7 @@ const FaqAnswer = ({ question = null, answer = null }) => {
           {question}
         </p>
       </div>
-      <div className={stls.answer}>{parse(marked(answer))}</div>
+      <div className={stls.answer}>{answer && parse(marked(answer))}</div>
     </li>
   )
 }
