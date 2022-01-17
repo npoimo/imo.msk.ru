@@ -1,18 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "s-maxage=3600, stale-while-revalidate=360"
-        }
-      ]
-    }
-  ],
-  "github": {
-    "enabled": false
-  }
+  "trailingSlash": false
 }
