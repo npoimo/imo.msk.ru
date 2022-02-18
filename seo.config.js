@@ -12,11 +12,11 @@ const seo = {
   // },
   defaultTitle: 'Институт Медицинского Образования',
   description: 'Добро пожаловать в Институт Медицинского Образования',
-  canonical: 'https://imo.msk.ru'
-  // dangerouslySetAllPagesToNoIndex: true,
-  // dangerouslySetAllPagesToNoFollow: true
-  // noindex: true,
-  // nofollow: true
+  canonical: 'https://imo.msk.ru',
+  dangerouslySetAllPagesToNoIndex: true,
+  dangerouslySetAllPagesToNoFollow: true,
+  noindex: true,
+  nofollow: true
 }
 
 export default seo
