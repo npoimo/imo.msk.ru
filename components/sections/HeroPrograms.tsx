@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/HeroPrograms.module.sass'
+import { elementIds } from '@/config/index'
 import Link from 'next/link'
 import { useContext } from 'react'
 import cn from 'classnames'
@@ -13,7 +14,7 @@ const HeroPrograms = ({ ofType = null }) => {
   const slug = curProgramsStudyFieldSlug ? curProgramsStudyFieldSlug : ''
 
   return (
-    <section className={stls.container}>
+    <section id={elementIds.heroPrograms} className={stls.container}>
       <Wrapper>
         <div className={stls.heading}>
           <h1 className={stls.title}>Программы</h1>

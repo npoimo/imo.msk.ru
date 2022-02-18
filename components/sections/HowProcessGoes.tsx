@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/HowProcessGoes.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import TwoColumns from '@/components/layout/TwoColumns'
 import { ListHowProcessGoes } from '@/components/lists'
@@ -6,7 +7,7 @@ import GetDiplomaAndAccreditation from '@/components/general/GetDiplomaAndAccred
 
 const HowProcessGoes = () => {
   return (
-    <section className={stls.container}>
+    <section id={elementIds.howProcessGoes} className={stls.container}>
       <Wrapper>
         <TwoColumns classNames={[stls.twoColumns]}>
           <div className={stls.heading}>

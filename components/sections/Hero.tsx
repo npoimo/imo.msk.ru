@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/Hero.module.sass'
+import { elementIds } from '@/config/index'
 import 'reactjs-popup/dist/index.css'
 import Wrapper from '@/components/layout/Wrapper'
 import TwoColumns from '@/components/layout/TwoColumns'
@@ -22,7 +23,7 @@ const Hero = () => {
     }
   }
   return (
-    <section className={stls.container}>
+    <section id={elementIds.hero} className={stls.container}>
       <div className={stls.bg}></div>
       <Wrapper>
         <TwoColumns>

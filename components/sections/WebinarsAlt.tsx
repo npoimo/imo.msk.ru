@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/WebinarsAlt.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import classNames from 'classnames'
 import Popup from 'reactjs-popup'
@@ -13,7 +14,7 @@ type WebinarsAltType = {
 
 const WebinarsAlt = ({ webinars = null }: WebinarsAltType) => {
   return (
-    <section className={stls.container}>
+    <section id={elementIds.webinarsAlt} className={stls.container}>
       <Wrapper>
         <h1 className={stls.title}>Вебинары</h1>
         <ul className={stls.webinars}>

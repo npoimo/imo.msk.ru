@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/LegalDocs.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { IconDoc } from '@/components/icons'
 
@@ -40,7 +41,7 @@ const LegalDocs = () => {
     }
   ]
   return (
-    <section className={stls.container}>
+    <section id={elementIds.legalDocs} className={stls.container}>
       <Wrapper>
         <h2 className={stls.title}>Нормативные документы</h2>
         <div className={stls.content}>

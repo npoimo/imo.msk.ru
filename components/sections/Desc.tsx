@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/Desc.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { IconAtom } from '@/components/icons'
 import ProgramContext from '@/context/program/programContext'
@@ -12,7 +13,7 @@ const Desc = () => {
   } = useContext(ProgramContext)
 
   return (
-    <section className={stls.container}>
+    <section id={elementIds.desc} className={stls.container}>
       <Wrapper>
         <div className={stls.icon}>
           <IconAtom calpha barelyVisible />

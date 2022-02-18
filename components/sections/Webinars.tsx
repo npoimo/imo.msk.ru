@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/Webinars.module.sass'
+import { elementIds } from '@/config/index'
 import { useMediaQuery } from 'react-responsive'
 import Wrapper from '@/components/layout/Wrapper'
 import SwiperContainer from '@/components/general/SwiperContainer'
@@ -84,6 +85,7 @@ const Webinars = ({ standalone = false }: WebinarsType) => {
 
   return (
     <section
+      id={elementIds.webinars}
       className={classNames({
         [stls.container]: true,
         [stls.standalone]: standalone

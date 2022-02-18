@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/Reviews.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import CardReview from '@/components/cards/CardReview'
 import SwiperContainer from '@/components/general/SwiperContainer'
@@ -31,6 +32,7 @@ const Reviews = ({ standalone = false, reviews }: ReviewsType) => {
 
   return (
     <section
+      id={elementIds.reviews}
       className={classNames({
         [stls.container]: true,
         [stls.standalone]: standalone

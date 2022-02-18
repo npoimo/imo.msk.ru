@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/Contacts.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { city, cityAlmaty, street, streetAlmaty } from '@/data/location'
 import {
@@ -26,7 +27,7 @@ const Contacts = () => {
     }
   ]
   return (
-    <section className={stls.container}>
+    <section id={elementIds.contacts} className={stls.container}>
       <Wrapper>
         <div className={stls.cards}>
           {cards.map(({ city, street, numbers, email }) => (

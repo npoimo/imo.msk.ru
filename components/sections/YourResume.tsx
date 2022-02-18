@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/YourResume.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { ImgResume1 } from '@/components/imgs'
 import ProgramContext from '@/context/program/programContext'
@@ -11,7 +12,7 @@ const YourResume = () => {
   } = useContext(ProgramContext)
 
   return (
-    <section className={stls.container}>
+    <section id={elementIds.yourResume} className={stls.container}>
       <Wrapper>
         <h2 className={stls.title}>Ваше резюме после обучения</h2>
         <div className={stls.content}>

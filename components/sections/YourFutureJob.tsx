@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/YourFutureJob.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import {
   ImgCourse2,
@@ -16,7 +17,7 @@ const YourFutureJob = () => {
   } = useContext(ProgramContext)
 
   return (
-    <section className={stls.container}>
+    <section id={elementIds.yourFutureJob} className={stls.container}>
       <Wrapper>
         <h2 className={stls.title}>Кем сможете работать</h2>
         <div className={stls.content}>

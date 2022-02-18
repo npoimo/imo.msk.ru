@@ -1,11 +1,12 @@
 import stls from '@/styles/components/sections/ContactForm.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { FormAlpha } from '@/components/forms'
 import { IconAtom } from '@/components/icons'
 
 const ContactForm = () => {
   return (
-    <section className={stls.container}>
+    <section id={elementIds.contactForm} className={stls.container}>
       <Wrapper>
         <div className={stls.wrapper}>
           <div className={stls.atom}>

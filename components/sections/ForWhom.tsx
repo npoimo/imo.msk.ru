@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/ForWhom.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import {
   IconGettingup,
@@ -17,7 +18,7 @@ const ForWhom = () => {
   } = useContext(ProgramContext)
 
   return (
-    <section className={stls.container}>
+    <section id={elementIds.forWhom} className={stls.container}>
       <Wrapper classNames={[stls.wrapper]}>
         <div className={stls.left}>
           <div className={stls.text}>
@@ -45,8 +46,12 @@ const ForWhom = () => {
             {forWhom &&
               forWhom.map(({ title, desc }, idx) => (
                 <li key={title + idx} className={stls.item}>
-                  <div className={stls.itemTitle}>{title && parse(marked(title))}</div>
-                  <div className={stls.itemDesc}>{desc && parse(marked(desc))}</div>
+                  <div className={stls.itemTitle}>
+                    {title && parse(marked(title))}
+                  </div>
+                  <div className={stls.itemDesc}>
+                    {desc && parse(marked(desc))}
+                  </div>
                   {forWhom[idx + 1] && <div className={stls.divider}></div>}
                 </li>
               ))}

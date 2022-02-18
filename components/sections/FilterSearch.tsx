@@ -1,11 +1,12 @@
 import stls from '@/styles/components/sections/FilterSearch.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { BtnSearch, BtnFilter } from '@/components/btns'
 import { BtnProgramsField } from '@/components/btns'
 
 const FilterSearch = ({ ofType }) => {
   return (
-    <section className={stls.container}>
+    <section id={elementIds.filterSearch} className={stls.container}>
       <Wrapper>
         <BtnProgramsField ofType={ofType} />
 

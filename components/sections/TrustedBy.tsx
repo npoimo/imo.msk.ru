@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/TrustedBy.module.sass'
+import { elementIds } from '@/config/index'
 import { TypeClassNames } from '@/types/index'
 import cn from 'classnames'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -35,7 +36,9 @@ const TrustedBy = ({ classNames = [] }: TypeTrustedBy) => {
     { img: <ImgLogoTatneft classNames={[stls.img]} /> }
   ]
   return (
-    <section className={cn([stls.container], container)}>
+    <section
+      id={elementIds.trustedBy}
+      className={cn([stls.container], container)}>
       <Wrapper>
         <h2 className={stls.title}>Нам доверяют обучение</h2>
         <Swiper

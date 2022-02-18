@@ -1,8 +1,9 @@
 import stls from '@/styles/components/sections/About.module.sass'
+import classNames from 'classnames'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import AboutLeaf from '@/components/general/AboutLeaf'
 import ProsCircle from '@/components/general/ProsCircle'
-import classNames from 'classnames'
 
 type AboutType = {
   standalone?: boolean
@@ -11,6 +12,7 @@ type AboutType = {
 const About = ({ standalone = false }: AboutType) => {
   return (
     <section
+      id={elementIds.about}
       className={classNames({
         [stls.container]: true,
         [stls.standalone]: standalone

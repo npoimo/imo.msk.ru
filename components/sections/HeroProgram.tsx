@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/HeroProgram.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import ProgramLabel from '@/components/program/ProgramLabel'
 import ProgramDiscount from '@/components/program/ProgramDiscount'
@@ -18,7 +19,7 @@ const HeroProgram = () => {
 
   const { curProgramsType } = useContext(ProgramsContext)
   return (
-    <section className={stls.container}>
+    <section id={elementIds.heroProgram} className={stls.container}>
       <Wrapper>
         <div className={stls.top}>
           <div className={stls.heading}>

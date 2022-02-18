@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/StudyCost.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import ProgramDiscount from '@/components/program/ProgramDiscount'
 import ProgramCost from '@/components/program/ProgramCost'
@@ -46,7 +47,7 @@ const StudyCost = () => {
   ]
 
   return (
-    <section className={stls.container}>
+    <section id={elementIds.studyCost} className={stls.container}>
       <Wrapper>
         <h2 className={stls.title}>
           <span className={stls.phonetablet}>Стоимость обучения</span>{' '}

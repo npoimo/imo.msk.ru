@@ -1,11 +1,12 @@
 import stls from '@/styles/components/sections/BriefProgramContents.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import ProgramModulesQty from '@/components/program/ProgramModulesQty'
 import ProgramModules from '@/components/program/ProgramModules'
 
 const BriefProgramContents = () => {
   return (
-    <section className={stls.container}>
+    <section id={elementIds.briefProgramContents} className={stls.container}>
       <Wrapper>
         <div className={stls.top}>
           <div className={stls.heading}>

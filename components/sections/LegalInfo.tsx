@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/LegalInfo.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { zipcode, city, streetAlt } from '@/data/location'
 import { number } from '@/data/contact'
@@ -57,7 +58,7 @@ const LegalInfo = () => {
     }
   ]
   return (
-    <section className={stls.container}>
+    <section id={elementIds.legalInfo} className={stls.container}>
       <Wrapper>
         <h2 className={stls.title}>Основные сведения</h2>
         <div className={stls.content}>

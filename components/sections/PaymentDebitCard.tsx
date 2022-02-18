@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/PaymentDebitCard.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { ImgOnlinePayment } from '@/components/imgs'
 import { IconCircleCheck } from '../icons'
@@ -7,7 +8,7 @@ const PaymentDebitCard = () => {
   const list = ['VISA International', 'Mastercard Worldwide', 'JCB', 'МИР']
 
   return (
-    <section className={stls.container}>
+    <section id={elementIds.paymentDebitCard} className={stls.container}>
       <Wrapper>
         <div className={stls.left}>
           <h2 className={stls.title}>Банковской картой</h2>

@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/Diplomas.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import DiplomaExpandableItem from '@/components/general/DiplomaExpandableItem'
 import { ImgDiploma, ImgCertificate } from '@/components/imgs'
@@ -25,7 +26,7 @@ const Diplomas = () => {
     }
   ]
   return (
-    <section className={stls.container}>
+    <section id={elementIds.diplomas} className={stls.container}>
       <Wrapper>
         <h2 className={stls.title}>
           Выдаваемые дипломы <br />и сертификаты

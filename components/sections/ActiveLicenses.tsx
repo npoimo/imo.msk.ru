@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/ActiveLicenses.module.sass'
+import { elementIds } from '@/config/index'
 import Popup from 'reactjs-popup'
 import Wrapper from '@/components/layout/Wrapper'
 import { CheckLicense } from '@/components/sections'
@@ -8,7 +9,7 @@ import ImgLicence from '@/components/imgs/legal/ImgLicence'
 
 const ActiveLicenses = () => {
   return (
-    <section className={stls.container}>
+    <section id={elementIds.activeLicenses} className={stls.container}>
       <Wrapper>
         <h2 className={stls.title}>Действующие лицензии</h2>
         <p className={stls.p}>

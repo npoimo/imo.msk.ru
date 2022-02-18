@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/WhyBother.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import TwoColumns from '@/components/layout/TwoColumns'
 import {
@@ -10,7 +11,7 @@ import {
 
 const WhyBother = () => {
   return (
-    <section className={stls.container}>
+    <section id={elementIds.whyBother} className={stls.container}>
       <Wrapper>
         <h2 className={stls.title}>
           Почему стоит осваивать профессию психолога?

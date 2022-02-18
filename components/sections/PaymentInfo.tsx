@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/PaymentInfo.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { number } from '@/data/contact'
 import { email } from '@/data/email'
@@ -47,7 +48,7 @@ const PaymentInfo = () => {
   ]
 
   return (
-    <section className={stls.container}>
+    <section id={elementIds.paymentInfo} className={stls.container}>
       <Wrapper>
         <ul className={stls.list}>
           {list.map((item, idx) => (

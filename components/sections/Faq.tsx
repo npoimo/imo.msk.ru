@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/Faq.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import FaqAnswer from '@/components/general/FaqAnswer'
 import ProgramContext from '@/context/program/programContext'
@@ -22,7 +23,7 @@ const Faq = () => {
   //   }))
 
   return (
-    <section className={stls.container}>
+    <section id={elementIds.faq} className={stls.container}>
       <Wrapper>
         <div className={stls.heading}>
           {' '}

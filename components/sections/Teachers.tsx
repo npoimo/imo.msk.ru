@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/Teachers.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import SwiperContainer from '@/components/general/SwiperContainer'
 import CardTeacher from '@/components/cards/CardTeacher'
@@ -52,7 +53,7 @@ const Teachers = () => {
   }
 
   return (
-    <section className={stls.container}>
+    <section id={elementIds.teachers} className={stls.container}>
       <Wrapper>
         <h2 className={stls.title}>Преподаватели программы</h2>
         <p className={stls.desc}>

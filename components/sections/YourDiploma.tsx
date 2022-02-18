@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/YourDiploma.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import SwiperContainer from '@/components/general/SwiperContainer'
 import { ImgCertificate, ImgDiploma } from '@/components/imgs'
@@ -28,7 +29,7 @@ const YourDiploma = ({ ofType = null }: YourDiplomaType) => {
   const desktopSwiperOptions = tabletSwiperOptions
 
   return (
-    <section className={stls.container}>
+    <section id={elementIds.yourDiploma} className={stls.container}>
       <Wrapper>
         <div className={stls.content}>
           <div className={stls.left}>

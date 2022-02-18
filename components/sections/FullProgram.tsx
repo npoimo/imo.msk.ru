@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/FullProgram.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { BtnAlpha } from '@/components/btns'
 import { ImgFullProgram1 } from '@/components/imgs'
@@ -6,7 +7,7 @@ import PopupTrigger from '@/components/general/PopupTrigger'
 
 const FullProgram = () => {
   return (
-    <section className={stls.container}>
+    <section id={elementIds.fullProgram} className={stls.container}>
       <Wrapper>
         <div className={stls.wrapper}>
           <div className={stls.img}>

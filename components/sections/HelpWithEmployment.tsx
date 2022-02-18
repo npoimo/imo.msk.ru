@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/HelpWithEmployment.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import CorporateClients from '@/components/general/CorporateClients'
 import { IconCircleCheck } from '@/components/icons'
@@ -14,7 +15,7 @@ const HelpWithEmployment = () => {
   ]
 
   return (
-    <section className={stls.container}>
+    <section id={elementIds.helpWithEmployment} className={stls.container}>
       <Wrapper>
         <h2 className={stls.title}>
           Помощь в трудоустройстве{' '}

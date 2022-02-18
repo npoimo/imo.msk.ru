@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/Programs.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import {
   ProgramsProfessions,
@@ -107,6 +108,7 @@ const Programs = ({
 
   return (
     <section
+      id={elementIds.programs}
       className={classNames({
         [stls.container]: true,
         [stls.withFilters]: withFilters

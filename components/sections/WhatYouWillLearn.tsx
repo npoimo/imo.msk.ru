@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/WhatYouWillLearn.module.sass'
+import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { IconCircleCheck } from '@/components/icons'
 import ProgramContext from '@/context/program/programContext'
@@ -10,7 +11,7 @@ const WhatYouWillLearn = () => {
   } = useContext(ProgramContext)
 
   return (
-    <section className={stls.container}>
+    <section id={elementIds.whatYouWillLearn} className={stls.container}>
       <Wrapper>
         <h2 className={stls.title}>Чему вы научитесь</h2>
         <ul className={stls.whatYouWillLearn}>

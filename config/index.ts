@@ -3,6 +3,7 @@ import breakpoints from '@/config/breakpoints'
 import companyName from '@/config/companyName'
 import gtmId from '@/config/gtmId'
 import dev from '@/config/dev'
+import elementIds from '@/config/elementIds'
 import prod from '@/config/prod'
 import revalidate from '@/config/revalidate'
 import fallback from '@/config/fallback'
@@ -14,6 +15,7 @@ export {
   companyName,
   breakpoints,
   dev,
+  elementIds,
   prod,
   routesFront,
   fallback,
