@@ -7,7 +7,7 @@ import ImgSupplementBack from '@/components/imgs/diplomas/ImgSupplementBack'
 import ImgForWhom from '@/components/imgs/forWhom/ImgForWhom'
 import ImgForWhomPhoneTablet from '@/components/imgs/forWhom/ImgForWhomPhoneTablet'
 import ImgCertificate from '@/components/imgs/diplomas/ImgCertificate'
-import ImgLadyStudying from '@/components/imgs/general/ImgLadyStudying'
+import ImgHero from '@/components/imgs/general/ImgHero'
 import ImgLogo from '@/components/imgs/logos/ImgLogo'
 import ImgOnlinePayment from '@/components/imgs/payment/ImgOnlinePayment'
 import ImgPortrait1 from '@/components/imgs/webinars/ImgPortrait1'
@@ -50,7 +50,7 @@ export {
   ImgForWhom,
   ImgForWhomPhoneTablet,
   ImgCertificate,
-  ImgLadyStudying,
+  ImgHero,
   ImgLogo,
   ImgOnlinePayment,
   ImgPortrait1,

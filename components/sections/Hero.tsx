@@ -5,7 +5,7 @@ import Wrapper from '@/components/layout/Wrapper'
 import TwoColumns from '@/components/layout/TwoColumns'
 import ProsList from '@/components/general/ProsList'
 import { IconAtom } from '@/components/icons'
-import { ImgLadyStudying } from '@/components/imgs'
+import { ImgHero } from '@/components/imgs'
 import PopupTrigger from '@/components/general/PopupTrigger'
 
 const Hero = () => {
@@ -49,7 +49,7 @@ const Hero = () => {
               <IconAtom large cnu slightlyVisible />
             </div>
             <div className={stls.img}>
-              <ImgLadyStudying />
+              <ImgHero />
             </div>
             <div className={stls.prosList}>
               <ProsList />

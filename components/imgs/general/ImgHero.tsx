@@ -1,8 +1,8 @@
-import stls from '@/styles/components/imgs/general/ImgLadyStudying.module.sass'
+import stls from '@/styles/components/imgs/general/ImgHero.module.sass'
 import Image from 'next/image'
 import pic from '@/public/assets/imgs/general/lady-studying.jpg'
 
-const ImgLadyStudying = ({ width = 0, height = 0 }) => {
+const ImgHero = ({ width = 0, height = 0 }) => {
   return (
     <div className={stls.container}>
       <Image
@@ -17,4 +17,4 @@ const ImgLadyStudying = ({ width = 0, height = 0 }) => {
   )
 }
 
-export default ImgLadyStudying
+export default ImgHero

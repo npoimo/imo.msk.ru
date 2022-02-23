@@ -31,16 +31,17 @@ const handleGetStaticProps = async ({
 
   let program = null
   if (slug) {
-    const id = res.data.programs.filter(
-      program =>
-        program.slug === slug &&
-        program.study_field?.slug === studyFieldSlug &&
-        program.category?.type.toLowerCase() === type
-    )[0].id
+    const id =
+      res.data.programs.filter(
+        program =>
+          program.slug === slug &&
+          program.study_field?.slug === studyFieldSlug &&
+          program.category?.type.toLowerCase() === type
+      )?.[0]?.id || null
 
-    const programRes = await axios.get(
-      `${routesBack.root}${routesBack.programs}/${id}`
-    )
+    const programRes = id
+      ? await axios.get(`${routesBack.root}${routesBack.programs}/${id}`)
+      : null
 
     // program = convertMdToHtml({
     //   arr: [programRes.data],
@@ -53,7 +54,7 @@ const handleGetStaticProps = async ({
     //   ]
     // })[0]
 
-    program = programRes.data
+    program = programRes?.data || null
   }
 
   return {

@@ -22,6 +22,7 @@ type ProgramsType = {
   withQty?: boolean
   threerow?: boolean
   withFilters?: boolean
+  max?: number
 }
 
 const Programs = ({
@@ -30,7 +31,8 @@ const Programs = ({
   withBtn = false,
   withQty = false,
   threerow = false,
-  withFilters = false
+  withFilters = false,
+  max
 }: ProgramsType) => {
   const {
     courses,
@@ -68,6 +70,12 @@ const Programs = ({
     courses: curProgramsStudyFieldSlug ? coursesFiltered : courses,
     professions: curProgramsStudyFieldSlug ? professionsFiltered : professions,
     mbas: curProgramsStudyFieldSlug ? mbasFiltered : mbas
+  }
+
+  if (max) {
+    data.courses = data.courses.filter((item, idx) => idx < max)
+    data.professions = data.professions.filter((item, idx) => idx < max)
+    data.mbas = data.mbas.filter((item, idx) => idx < max)
   }
 
   useEffect(() => {
