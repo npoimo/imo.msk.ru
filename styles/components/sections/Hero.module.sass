@@ -100,16 +100,16 @@
     @include m.gap($pb: f.px(345))
 
 .img
+  height: 100%
   @include m.media(phone, tablet)
     @include m.gap($mt: f.px(51))
   @include m.media(laptop, desktop)
     position: absolute
     top: f.px(-66)
     z-index: 1
-  @include m.media(desktop)
-    right: f.px(-39)
-  @include m.media(laptop)
-    right: f.px(-119)
+  @include m.media(laptop, desktop)
+    width: f.px(993)
+    right: f.px(-340)
 
 .prosList
   @include m.media(phone, tablet)
