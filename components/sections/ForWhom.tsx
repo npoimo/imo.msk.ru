@@ -11,11 +11,14 @@ import { useContext } from 'react'
 import parse from 'html-react-parser'
 import marked from 'marked'
 import { ImgForWhom, ImgForWhomPhoneTablet } from '@/components/imgs'
+import pic from '@/public/assets/imgs/programs/courses/course-2.jpg'
 
 const ForWhom = () => {
   const {
     program: { forWhom, forWhomPicture }
   } = useContext(ProgramContext)
+
+  console.log(pic)
 
   return (
     <section id={elementIds.forWhom} className={stls.container}>
@@ -30,15 +33,15 @@ const ForWhom = () => {
           </div>
           <ImgForWhom
             classNames={[stls.imageLaptopDesktop]}
-            src={forWhomPicture && forWhomPicture.url}
-            width={forWhomPicture && forWhomPicture.width}
-            height={forWhomPicture && forWhomPicture.height}
+            src={pic || forWhomPicture?.url}
+            width={!pic ? forWhomPicture?.width : undefined}
+            height={!pic ? forWhomPicture?.height : undefined}
           />
           <ImgForWhomPhoneTablet
             classNames={[stls.imagePhoneTablet]}
-            src={forWhomPicture && forWhomPicture.url}
-            width={forWhomPicture && forWhomPicture.width}
-            height={forWhomPicture && forWhomPicture.height}
+            src={pic || forWhomPicture?.url}
+            width={!pic ? forWhomPicture.width : undefined}
+            height={!pic ? forWhomPicture.height : undefined}
           />
         </div>
         <div className={stls.right}>
