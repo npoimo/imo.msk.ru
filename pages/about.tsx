@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import { routesFront } from '@/config/index'
 import { routeAbout } from '@/data/routes'
-import companyName from '@/data/companyName'
+import { companyName } from '@/config/index'
 
 const AboutPage = ({ programs }) => {
   const { setPrograms, setCurProgramsType, setCurProgramsStudyFieldSlug } =
@@ -23,7 +23,7 @@ const AboutPage = ({ programs }) => {
       <NextSeo
         title={`Об институте | ${companyName}`}
         description={truncate(
-          `Московский Институт Психологии за современный подход в образовании. Мы постоянно берем обратную связь от работодателей и каждый месяц адаптируем учебные программы. Это в 12 раз быстрее обновления программы обучения в государственном ВУЗе!`,
+          `${companyName} за современный подход в образовании. Мы постоянно берем обратную связь от работодателей и каждый месяц адаптируем учебные программы. Это в 12 раз быстрее обновления программы обучения в государственном ВУЗе!`,
           120
         )}
         canonical={`${routesFront.root}${routeAbout}`}

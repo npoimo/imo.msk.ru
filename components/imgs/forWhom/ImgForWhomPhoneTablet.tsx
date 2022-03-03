@@ -15,7 +15,7 @@ const ImgForWhomPhoneTablet = ({
     <ImgTemplate
       classNames={classNames}
       src={defaultSrc}
-      alt={alt || 'Психолог в работе'}
+      alt={alt || 'Врач в работе'}
       width={width}
       height={height}
     />
