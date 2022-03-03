@@ -18,6 +18,8 @@ import {
   Webinars
 } from '@/components/sections'
 
+// TODO: replace icons in ./public/assets/imgs/icons
+
 const HomePage = ({ programs, reviews }) => {
   const { setPrograms, setCurProgramsType, setCurProgramsStudyFieldSlug } =
     useContext(ProgramsContext)
