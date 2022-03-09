@@ -4,7 +4,7 @@ const programsContext = createContext({
   programs: [],
   courses: [],
   professions: [],
-  mbas: [],
+  hmos: [],
   studyFields: [],
   studyFieldsProfessions: [],
   studyFieldsCourses: [],

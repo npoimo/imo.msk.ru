@@ -38,7 +38,7 @@ const HeroProgram = () => {
                     ? 'signUpForCourse'
                     : curProgramsType === 'profession'
                     ? 'signUpForProfession'
-                    : curProgramsType === 'mba'
+                    : curProgramsType === 'hmo'
                     ? 'signUpForHMO'
                     : 'signUp'
                 }
@@ -66,7 +66,7 @@ const HeroProgram = () => {
                 ? 'signUpForCourse'
                 : curProgramsType === 'profession'
                 ? 'signUpForProfession'
-                : curProgramsType === 'mba'
+                : curProgramsType === 'hmo'
                 ? 'signUpForHMO'
                 : 'signUp'
             }

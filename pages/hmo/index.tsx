@@ -8,24 +8,24 @@ import { routeHMO } from '@/data/routes'
 import companyName from '@/data/companyName'
 import { PagesPrograms } from '@/components/pages'
 
-const MBAPage = ({ programs }) => {
+const HMOPage = ({ programs }) => {
   const { setPrograms, setCurProgramsType, setCurProgramsStudyFieldSlug } =
     useContext(ProgramsContext)
 
   useEffect(() => {
     setPrograms(programs)
-    setCurProgramsType('mba')
+    setCurProgramsType('hmo')
     setCurProgramsStudyFieldSlug(null)
   }, [programs])
 
   return (
     <>
       <NextSeo
-        title={`MBA | ${companyName}`}
-        description={truncate(`${companyName} MBA`, 120)}
+        title={`НМО | ${companyName}`}
+        description={truncate(`${companyName} НМО`, 120)}
         canonical={`${routesFront.root}${routeHMO}`}
       />
-      <PagesPrograms ofType='mba' />
+      <PagesPrograms ofType='hmo' />
     </>
   )
 }
@@ -33,4 +33,4 @@ const MBAPage = ({ programs }) => {
 export const getStaticProps = async () =>
   await handleGetStaticProps({ page: '/programs' })
 
-export default MBAPage
+export default HMOPage

@@ -41,10 +41,10 @@ const HeroPrograms = ({ ofType = null }) => {
           <Link href={`${routeHMO}/${slug}`}>
             <a
               className={cn([stls.link], {
-                [stls.active]: curProgramsType === 'mba'
+                [stls.active]: curProgramsType === 'hmo'
               })}>
-              <span className={stls.laptopdesktop}>MBA</span>
-              <span className={stls.phonetablet}>MBA</span>
+              <span className={stls.laptopdesktop}>НМО</span>
+              <span className={stls.phonetablet}>НМО</span>
             </a>
           </Link>
         </div>

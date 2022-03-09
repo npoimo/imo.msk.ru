@@ -46,8 +46,8 @@ const ProgramsTemplate = ({
                 ? 'Повышение квалификации'
                 : ofType === 'profession'
                 ? 'Переподготовка'
-                : ofType === 'mba'
-                ? 'MBA'
+                : ofType === 'hmo'
+                ? 'НМО'
                 : 'Программы'}
             </h2>
             {withQty && (
@@ -63,8 +63,8 @@ const ProgramsTemplate = ({
                 ? 'Повышение квалификации'
                 : ofType === 'profession'
                 ? 'Переподготовка'
-                : ofType === 'mba'
-                ? 'MBA'
+                : ofType === 'hmo'
+                ? 'НМО'
                 : 'Программы'}
             </h3>
             {withQty && (
@@ -83,8 +83,8 @@ const ProgramsTemplate = ({
                   ? 'Короткие программы, чтобы изучить один конкретный навык'
                   : ofType === 'profession'
                   ? 'Длинные программы для полного погружения в направление'
-                  : ofType === 'mba'
-                  ? 'MBA'
+                  : ofType === 'hmo'
+                  ? 'НМО'
                   : ''}
               </p>
             )}
@@ -123,8 +123,8 @@ const ProgramsTemplate = ({
                 ? 'курсы'
                 : ofType === 'profession'
                 ? 'профессии'
-                : ofType === 'mba'
-                ? 'MBA'
+                : ofType === 'hmo'
+                ? 'программы'
                 : 'программы'
             }`}
             href={
@@ -132,7 +132,7 @@ const ProgramsTemplate = ({
                 ? routeCourses
                 : ofType === 'profession'
                 ? routeProfessions
-                : ofType === 'mba'
+                : ofType === 'hmo'
                 ? routeHMO
                 : routePrograms
             }

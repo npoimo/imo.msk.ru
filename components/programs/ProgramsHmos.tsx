@@ -1,31 +1,31 @@
-import stls from '@/styles/components/programs/ProgramsMbas.module.sass'
+import stls from '@/styles/components/programs/ProgramsHmos.module.sass'
 import { ProgramsTemplate } from '@/components/programs'
 
-type TypeProgramsMbas = {
+type TypeProgramsHmos = {
   biggerTitle?: boolean
   withBtn?: boolean
-  mbas: any[]
+  hmos: any[]
   withQty?: boolean
   threerow?: boolean
 }
 
-const ProgramsMbas = ({
+const ProgramsHmos = ({
   biggerTitle = false,
   withBtn = false,
-  mbas = [],
+  hmos = [],
   withQty = false,
   threerow = false
-}: TypeProgramsMbas) => {
+}: TypeProgramsHmos) => {
   return (
     <ProgramsTemplate
       biggerTitle={biggerTitle}
       withBtn={withBtn}
-      programs={mbas}
+      programs={hmos}
       withQty={withQty}
       threerow={threerow}
-      ofType='mba'
+      ofType='hmo'
     />
   )
 }
 
-export default ProgramsMbas
+export default ProgramsHmos

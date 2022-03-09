@@ -4,7 +4,7 @@ import Wrapper from '@/components/layout/Wrapper'
 import {
   ProgramsProfessions,
   ProgramsCourses,
-  ProgramsMbas
+  ProgramsHmos
 } from '@/components/programs'
 import ProgramsFilters from '@/components/layout/ProgramsFilters'
 import ProgramsContext from '@/context/programs/programsContext'
@@ -37,7 +37,7 @@ const Programs = ({
   const {
     courses,
     professions,
-    mbas,
+    hmos,
     curProgramsStudyFieldSlug,
     filteredPrograms,
     searchTerm
@@ -59,23 +59,23 @@ const Programs = ({
       studyFieldSlug: curProgramsStudyFieldSlug
     })
 
-  const mbasFiltered =
+  const hmosFiltered =
     curProgramsStudyFieldSlug &&
     filterProgramsByStudyField({
-      programs: mbas,
+      programs: hmos,
       studyFieldSlug: curProgramsStudyFieldSlug
     })
 
   const data = {
     courses: curProgramsStudyFieldSlug ? coursesFiltered : courses,
     professions: curProgramsStudyFieldSlug ? professionsFiltered : professions,
-    mbas: curProgramsStudyFieldSlug ? mbasFiltered : mbas
+    hmos: curProgramsStudyFieldSlug ? hmosFiltered : hmos
   }
 
   if (max) {
     data.courses = data.courses.filter((item, idx) => idx < max)
     data.professions = data.professions.filter((item, idx) => idx < max)
-    data.mbas = data.mbas.filter((item, idx) => idx < max)
+    data.hmos = data.hmos.filter((item, idx) => idx < max)
   }
 
   useEffect(() => {
@@ -85,7 +85,7 @@ const Programs = ({
     ofType === 'profession' &&
       data.professions.length === 0 &&
       router.replace(routeProfessions)
-    ofType === 'mba' && data.mbas.length === 0 && router.replace(routeHMO)
+    ofType === 'hmo' && data.hmos.length === 0 && router.replace(routeHMO)
   }, [])
 
   const filteredProgramsIds = filteredPrograms.map(item => item.id)
@@ -105,7 +105,7 @@ const Programs = ({
       })
       if (include) return item
     }),
-    mbas: data.mbas.filter(item => {
+    hmos: data.hmos.filter(item => {
       let include = false
       filteredProgramsIds.forEach(id => {
         if (item.id === id) include = true
@@ -161,15 +161,15 @@ const Programs = ({
                   />
                 </div>
               )}
-            {ofType === 'mba' &&
+            {ofType === 'hmo' &&
               (searchTerm
-                ? filteredData.mbas && filteredData.mbas.length > 0
-                : data.mbas && data.mbas.length > 0) && (
-                <div className={stls.mbas}>
-                  <ProgramsMbas
+                ? filteredData.hmos && filteredData.hmos.length > 0
+                : data.hmos && data.hmos.length > 0) && (
+                <div className={stls.hmos}>
+                  <ProgramsHmos
                     biggerTitle={!withTitle}
                     withBtn={withBtn}
-                    mbas={searchTerm ? filteredData.mbas : data.mbas}
+                    hmos={searchTerm ? filteredData.hmos : data.hmos}
                     withQty={withQty}
                     threerow={threerow}
                   />
@@ -209,13 +209,13 @@ const Programs = ({
 
             {!ofType &&
               (searchTerm
-                ? filteredData.mbas && filteredData.mbas.length > 0
-                : data.mbas && data.mbas.length > 0) && (
-                <div className={stls.mbas}>
-                  <ProgramsMbas
+                ? filteredData.hmos && filteredData.hmos.length > 0
+                : data.hmos && data.hmos.length > 0) && (
+                <div className={stls.hmos}>
+                  <ProgramsHmos
                     biggerTitle={!withTitle}
                     withBtn={withBtn}
-                    mbas={searchTerm ? filteredData.mbas : data.mbas}
+                    hmos={searchTerm ? filteredData.hmos : data.hmos}
                     withQty={withQty}
                     threerow={threerow}
                   />
@@ -225,7 +225,7 @@ const Programs = ({
             {searchTerm &&
               filteredData.courses.length === 0 &&
               filteredData.professions.length === 0 &&
-              filteredData.mbas.length === 0 && (
+              filteredData.hmos.length === 0 && (
                 <>Кажется, что по вашему запросу ничего не нашлось</>
               )}
           </div>

@@ -15,7 +15,7 @@ const programsReducer = (state, action) => {
 
       const professions = filterProgramsByType({ programs, type: 'profession' })
 
-      const mbas = filterProgramsByType({ programs, type: 'mba' })
+      const hmos = filterProgramsByType({ programs, type: 'hmo' })
 
       const studyFields = getStudyFields(programs)
 
@@ -23,14 +23,14 @@ const programsReducer = (state, action) => {
 
       const studyFieldsCourses = getStudyFields(courses)
 
-      const studyFieldsHMOs = getStudyFields(mbas)
+      const studyFieldsHMOs = getStudyFields(hmos)
 
       return {
         ...state,
         programs,
         courses,
         professions,
-        mbas,
+        hmos,
         studyFields,
         studyFieldsProfessions,
         studyFieldsCourses,
