@@ -39,7 +39,7 @@ const HeroProgram = () => {
                     : curProgramsType === 'profession'
                     ? 'signUpForProfession'
                     : curProgramsType === 'mba'
-                    ? 'sighUpForHMO'
+                    ? 'signUpForHMO'
                     : 'signUp'
                 }
               />
@@ -67,7 +67,7 @@ const HeroProgram = () => {
                 : curProgramsType === 'profession'
                 ? 'signUpForProfession'
                 : curProgramsType === 'mba'
-                ? 'sighUpForHMO'
+                ? 'signUpForHMO'
                 : 'signUp'
             }
           />
