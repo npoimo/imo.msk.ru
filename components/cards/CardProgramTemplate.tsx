@@ -29,7 +29,7 @@ const CardProgramTemplate = ({
           ? routeProfessions
           : type === 'course'
           ? routeCourses
-          : type === 'mba'
+          : type === 'hmo'
           ? routeHMO
           : program.category?.slug || routePrograms
       }/${program.study_field?.slug || 'studyfield'}/${program.slug}`}>
