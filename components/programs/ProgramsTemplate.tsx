@@ -47,7 +47,7 @@ const ProgramsTemplate = ({
                 : ofType === 'profession'
                 ? 'Переподготовка'
                 : ofType === 'hmo'
-                ? 'НМО'
+                ? 'Курсы в системе НМО'
                 : 'Программы'}
             </h2>
             {withQty && (

@@ -18,13 +18,13 @@ const Contacts = () => {
       street,
       numbers: [number, numberAlt],
       email
-    },
-    {
-      city: cityAlmaty,
-      street: streetAlmaty,
-      numbers: [numberAlmaty],
-      email: emailAlmaty
     }
+    // {
+    //   city: cityAlmaty,
+    //   street: streetAlmaty,
+    //   numbers: [numberAlmaty],
+    //   email: emailAlmaty
+    // }
   ]
   return (
     <section id={elementIds.contacts} className={stls.container}>

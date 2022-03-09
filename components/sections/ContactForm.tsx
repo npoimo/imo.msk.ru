@@ -14,7 +14,7 @@ const ContactForm = () => {
           </div>
           <h2 className={stls.title}>Подберите программу</h2>
           <p className={stls.p}>
-            Ответьте на несколько вопросов и подберите программу обучения
+            Или оставьте заявку. Мы подробно вас проконсультируем
           </p>
           <div className={stls.form}>
             <FormAlpha atPagesPrograms />

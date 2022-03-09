@@ -35,9 +35,13 @@ const Header = () => {
       href: routeWebinars,
       val: 'Вебинары'
     },
+    // {
+    //   href: routeTeachers,
+    //   val: 'Преподаватели'
+    // },
     {
-      href: routeTeachers,
-      val: 'Преподаватели'
+      href: routeAbout,
+      val: 'Об институте'
     },
     {
       href: routeContact,
