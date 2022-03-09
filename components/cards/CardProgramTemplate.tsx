@@ -4,7 +4,7 @@ import {
   routeProfessions,
   routeCourses,
   routePrograms,
-  routeMBA
+  routeHMO
 } from '@/data/routes'
 import classNames from 'classnames'
 import ProgramStudyDuration from '@/components/program/ProgramStudyDuration'
@@ -30,7 +30,7 @@ const CardProgramTemplate = ({
           : type === 'course'
           ? routeCourses
           : type === 'mba'
-          ? routeMBA
+          ? routeHMO
           : program.category?.slug || routePrograms
       }/${program.study_field?.slug || 'studyfield'}/${program.slug}`}>
       <a

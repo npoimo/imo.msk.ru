@@ -6,7 +6,7 @@ import {
   routePrograms,
   routeCourses,
   routeProfessions,
-  routeMBA
+  routeHMO
 } from '@/data/routes'
 import classNames from 'classnames'
 import { TypeCategory } from '@/types/index'
@@ -58,7 +58,7 @@ const StudyFields = ({
                       : curProgramsType === 'profession'
                       ? routeProfessions
                       : curProgramsType === 'mba'
-                      ? routeMBA
+                      ? routeHMO
                       : routePrograms
                     : routePrograms
                 }
@@ -76,7 +76,7 @@ const StudyFields = ({
                     : curProgramsType === 'profession'
                     ? routeProfessions
                     : curProgramsType === 'mba'
-                    ? routeMBA
+                    ? routeHMO
                     : routePrograms
                   : routePrograms
               }/${slug}`}

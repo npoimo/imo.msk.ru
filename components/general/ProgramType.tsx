@@ -7,7 +7,7 @@ import {
   routeProfessions,
   routeCourses,
   routePrograms,
-  routeMBA
+  routeHMO
 } from '@/data/routes'
 
 const ProgramType = ({ close = null }) => {
@@ -53,7 +53,7 @@ const ProgramType = ({ close = null }) => {
         </a>
       </Link>
 
-      <Link href={`${routeMBA}/${slug}`}>
+      <Link href={`${routeHMO}/${slug}`}>
         <a className={stls.item} onClick={close && close}>
           <div
             className={classNames({

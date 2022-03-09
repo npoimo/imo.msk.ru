@@ -10,7 +10,7 @@ import {
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import { routesFront, revalidate } from '@/config/index'
-import { routeMBA } from '@/data/routes'
+import { routeHMO } from '@/data/routes'
 import companyName from '@/data/companyName'
 import { PagesProgram } from '@/components/pages'
 
@@ -31,7 +31,7 @@ const MBAPage = ({ programs, program, studyFieldSlug }) => {
       <NextSeo
         title={`${program.title} | MBA | ${companyName}`}
         description={truncate(program.description, 120)}
-        canonical={`${routesFront.root}${routeMBA}/${studyFieldSlug}/${program.slug}`}
+        canonical={`${routesFront.root}${routeHMO}/${studyFieldSlug}/${program.slug}`}
       />
       <PagesProgram ofType={'mba'} />
     </>

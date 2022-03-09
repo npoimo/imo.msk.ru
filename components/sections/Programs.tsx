@@ -12,7 +12,7 @@ import { useContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import classNames from 'classnames'
 import { filterProgramsByStudyField } from '@/helpers/index'
-import { routeCourses, routeMBA, routeProfessions } from '@/data/routes'
+import { routeCourses, routeHMO, routeProfessions } from '@/data/routes'
 import { TypeCategory } from '@/types/index'
 
 type ProgramsType = {
@@ -85,7 +85,7 @@ const Programs = ({
     ofType === 'profession' &&
       data.professions.length === 0 &&
       router.replace(routeProfessions)
-    ofType === 'mba' && data.mbas.length === 0 && router.replace(routeMBA)
+    ofType === 'mba' && data.mbas.length === 0 && router.replace(routeHMO)
   }, [])
 
   const filteredProgramsIds = filteredPrograms.map(item => item.id)

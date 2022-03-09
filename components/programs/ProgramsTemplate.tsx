@@ -4,7 +4,7 @@ import { TypeClassNames, TypeCategory } from '@/types/index'
 import { getClassNames } from '@/helpers/index'
 import {
   routeCourses,
-  routeMBA,
+  routeHMO,
   routeProfessions,
   routePrograms
 } from '@/data/routes'
@@ -133,7 +133,7 @@ const ProgramsTemplate = ({
                 : ofType === 'profession'
                 ? routeProfessions
                 : ofType === 'mba'
-                ? routeMBA
+                ? routeHMO
                 : routePrograms
             }
           />

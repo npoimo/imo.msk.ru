@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import cn from 'classnames'
 import ProgramsContext from '@/context/programs/programsContext'
 import Wrapper from '@/components/layout/Wrapper'
-import { routeCourses, routeMBA, routeProfessions } from '@/data/routes'
+import { routeCourses, routeHMO, routeProfessions } from '@/data/routes'
 
 const HeroPrograms = ({ ofType = null }) => {
   const { curProgramsType, curProgramsStudyFieldSlug } =
@@ -38,7 +38,7 @@ const HeroPrograms = ({ ofType = null }) => {
               <span className={stls.phonetablet}>ПК</span>
             </a>
           </Link>
-          <Link href={`${routeMBA}/${slug}`}>
+          <Link href={`${routeHMO}/${slug}`}>
             <a
               className={cn([stls.link], {
                 [stls.active]: curProgramsType === 'mba'
