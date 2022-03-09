@@ -1,3 +1,3 @@
-type TypeCategory = 'course' | 'profession' | 'mba'
+type TypeCategory = 'course' | 'profession' | 'hmo'
 
 export default TypeCategory

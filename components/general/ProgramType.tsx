@@ -58,9 +58,9 @@ const ProgramType = ({ close = null }) => {
           <div
             className={classNames({
               [stls.circle]: true,
-              [stls.active]: curProgramsType === 'mba'
+              [stls.active]: curProgramsType === 'hmo'
             })}></div>
-          <span className={stls.text}>MBA</span>
+          <span className={stls.text}>НМО</span>
         </a>
       </Link>
     </div>

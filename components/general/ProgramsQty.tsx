@@ -23,7 +23,7 @@ const ProgramsQty = ({ qty = 0, ofType, dye = 'bgbeta' }: ProgramsQtuType) => {
           ? getCasesRuProfessionString(qty)
           : ofType === 'course'
           ? getCasesRuCourseString(qty)
-          : ofType === 'mba'
+          : ofType === 'hmo'
           ? 'Программ'
           : 'Программ'}
       </span>

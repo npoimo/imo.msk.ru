@@ -8,7 +8,7 @@ const programsContext = createContext({
   studyFields: [],
   studyFieldsProfessions: [],
   studyFieldsCourses: [],
-  studyFieldsMbas: [],
+  studyFieldsHMOs: [],
   curProgramsType: null,
   curProgramsStudyFieldSlug: null,
   searchTerm: null,

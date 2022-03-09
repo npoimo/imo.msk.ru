@@ -23,7 +23,7 @@ const programsReducer = (state, action) => {
 
       const studyFieldsCourses = getStudyFields(courses)
 
-      const studyFieldsMbas = getStudyFields(mbas)
+      const studyFieldsHMOs = getStudyFields(mbas)
 
       return {
         ...state,
@@ -34,7 +34,7 @@ const programsReducer = (state, action) => {
         studyFields,
         studyFieldsProfessions,
         studyFieldsCourses,
-        studyFieldsMbas
+        studyFieldsHMOs
       }
     case SET_CUR_PROGRAMS_TYPE:
       return {

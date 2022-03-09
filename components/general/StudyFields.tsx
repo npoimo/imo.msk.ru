@@ -26,7 +26,7 @@ const StudyFields = ({
     studyFields,
     studyFieldsCourses,
     studyFieldsProfessions,
-    studyFieldsMbas,
+    studyFieldsHMOs,
     curProgramsType
   } = useContext(ProgramsContext)
 
@@ -35,8 +35,8 @@ const StudyFields = ({
       ? studyFieldsCourses
       : ofType === 'profession'
       ? studyFieldsProfessions
-      : ofType === 'mba'
-      ? studyFieldsMbas
+      : ofType === 'hmo'
+      ? studyFieldsHMOs
       : studyFields
 
   return (
@@ -57,7 +57,7 @@ const StudyFields = ({
                       ? routeCourses
                       : curProgramsType === 'profession'
                       ? routeProfessions
-                      : curProgramsType === 'mba'
+                      : curProgramsType === 'hmo'
                       ? routeHMO
                       : routePrograms
                     : routePrograms
@@ -75,7 +75,7 @@ const StudyFields = ({
                     ? routeCourses
                     : curProgramsType === 'profession'
                     ? routeProfessions
-                    : curProgramsType === 'mba'
+                    : curProgramsType === 'hmo'
                     ? routeHMO
                     : routePrograms
                   : routePrograms
