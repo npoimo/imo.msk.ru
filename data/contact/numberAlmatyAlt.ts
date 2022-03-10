@@ -1,6 +1,6 @@
 const numberAlmatyAlt = {
-  href: 'tel:+7-800-555-70-19',
-  val: '+7 (800) 555-70-19'
+  href: 'tel:+7-800-550-70-19',
+  val: '+7 (800) 550-70-19'
 }
 
 export default numberAlmatyAlt
