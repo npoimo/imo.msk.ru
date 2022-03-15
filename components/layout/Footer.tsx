@@ -69,7 +69,7 @@ const Footer = () => {
     }
   ]
 
-  // const fieldsLinks = studyFields.map(field => 
+  // const fieldsLinks = studyFields.map(field =>
   //   ({ val: field.label, href: `/programs/${field.slug}` })
   // )
 
@@ -131,9 +131,9 @@ const Footer = () => {
                 <a href={number.href} className={stls.number}>
                   {number.val}
                 </a>
-                <a href={numberAlt.href} className={stls.number}>
+                {/* <a href={numberAlt.href} className={stls.number}>
                   {numberAlt.val}
-                </a>
+                </a> */}
               </div>
               <div className={stls.address}>
                 {city}, {street}
