@@ -19,44 +19,52 @@ const WebinarsAlt = ({ webinars = null }: WebinarsAltType) => {
         <h1 className={stls.title}>Вебинары</h1>
         <ul className={stls.webinars}>
           {webinars &&
-            webinars.map((webinar, idx) => (
-              <li key={`CardWebinarAlt-${idx}`} className={stls.webinar}>
-                <Popup
-                  trigger={
-                    <div className={stls.trigger}>
-                      <CardWebinarAlt
-                        date={webinar.date}
-                        name={webinar.name}
-                        picture={
-                          <ImgWebinar
-                            src={webinar.picture?.formats?.thumbnail?.url}
-                            alt={webinar.title}
-                            width={webinar.picture?.formats?.thumbnail?.width}
-                            height={webinar.picture?.formats?.thumbnail?.height}
-                          />
+            [...webinars]
+              .filter(webinar => webinar?.date)
+              .sort(
+                (a, b) =>
+                  new Date(a.date).getTime() - new Date(b.date).getTime()
+              )
+              .map((webinar, idx) => (
+                <li key={`CardWebinarAlt-${idx}`} className={stls.webinar}>
+                  <Popup
+                    trigger={
+                      <div className={stls.trigger}>
+                        <CardWebinarAlt
+                          date={webinar.date}
+                          name={webinar.name}
+                          picture={
+                            <ImgWebinar
+                              src={webinar.picture?.formats?.thumbnail?.url}
+                              alt={webinar.title}
+                              width={webinar.picture?.formats?.thumbnail?.width}
+                              height={
+                                webinar.picture?.formats?.thumbnail?.height
+                              }
+                            />
+                          }
+                          title={webinar.title}
+                        />
+                      </div>
+                    }
+                    modal
+                    nested>
+                    {close => (
+                      <PopupCta
+                        title={'Смотреть все вебинары'}
+                        desc={
+                          <>
+                            Оставьте заявку, мы свяжемся с Вами в рабочие часы и
+                            предоставим полный список вебинаров
+                          </>
                         }
-                        title={webinar.title}
+                        cta={'Оставить заявку'}
+                        close={close}
                       />
-                    </div>
-                  }
-                  modal
-                  nested>
-                  {close => (
-                    <PopupCta
-                      title={'Смотреть все вебинары'}
-                      desc={
-                        <>
-                          Оставьте заявку, мы свяжемся с Вами в рабочие часы и
-                          предоставим полный список вебинаров
-                        </>
-                      }
-                      cta={'Оставить заявку'}
-                      close={close}
-                    />
-                  )}
-                </Popup>
-              </li>
-            ))}
+                    )}
+                  </Popup>
+                </li>
+              ))}
         </ul>
         <div className={stls.btn}>
           <PopupTrigger btn='delta' cta='seeAllWebinars' />
