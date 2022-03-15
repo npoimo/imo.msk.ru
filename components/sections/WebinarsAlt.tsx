@@ -23,7 +23,7 @@ const WebinarsAlt = ({ webinars = null }: WebinarsAltType) => {
               .filter(webinar => webinar?.date)
               .sort(
                 (a, b) =>
-                  new Date(a.date).getTime() - new Date(b.date).getTime()
+                  new Date(b.date).getTime() - new Date(a.date).getTime()
               )
               .map((webinar, idx) => (
                 <li key={`CardWebinarAlt-${idx}`} className={stls.webinar}>
