@@ -1,9 +1,10 @@
 import stls from '@/styles/components/sections/Reviews.module.sass'
-import { elementIds } from '@/config/index'
-import Wrapper from '@/components/layout/Wrapper'
-import CardReview from '@/components/cards/CardReview'
-import SwiperContainer from '@/components/general/SwiperContainer'
 import classNames from 'classnames'
+import { elementIds } from '@/config/index'
+import { getImageHeight } from '@/helpers/index'
+import Wrapper from '@/components/layout/Wrapper'
+import SwiperContainer from '@/components/general/SwiperContainer'
+import CardReview from '@/components/cards/CardReview'
 import { ImgReview } from '@/components/imgs'
 
 type ReviewsType = {
@@ -18,10 +19,14 @@ const Reviews = ({ standalone = false, reviews }: ReviewsType) => {
       title={review.title}
       photo={
         <ImgReview
-          src={review.picture[0]?.formats?.small?.url}
+          src={review.picture[0]?.url}
           alt={review.name}
-          width={review.picture[0]?.formats?.small?.width}
-          height={review.picture[0]?.formats?.small?.height}
+          width={110}
+          height={getImageHeight({
+            width: 110,
+            widthInitial: review.picture[0]?.width,
+            heightInitial: review.picture[0]?.height
+          })}
         />
       }
       name={review.name}
