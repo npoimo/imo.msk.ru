@@ -18,8 +18,6 @@ const ForWhom = () => {
     program: { forWhom, forWhomPicture }
   } = useContext(ProgramContext)
 
-  console.log(pic)
-
   return (
     <section id={elementIds.forWhom} className={stls.container}>
       <Wrapper classNames={[stls.wrapper]}>

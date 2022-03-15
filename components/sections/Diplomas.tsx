@@ -1,6 +1,6 @@
 import stls from '@/styles/components/sections/Diplomas.module.sass'
-import { elementIds } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
+import { elementIds } from '@/config/index'
 import DiplomaExpandableItem from '@/components/general/DiplomaExpandableItem'
 import { ImgDiploma, ImgCertificate } from '@/components/imgs'
 
