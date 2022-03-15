@@ -40,8 +40,8 @@ const Header = () => {
     //   val: 'Преподаватели'
     // },
     {
-      href: routeAbout,
-      val: 'Об институте'
+      href: routeTeachers,
+      val: 'Преподаватели'
     },
     {
       href: routeContact,

@@ -43,7 +43,7 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
         <YourResume />
       )}
       {ofType !== 'course' && <YourFutureJob />}
-      {/* <Teachers /> */}
+      <Teachers />
       <Cta
         title={'Начните обучаться со скидкой'}
         desc={`Забронируйте программу по спеццене — со скидкой ${discount.substring(
