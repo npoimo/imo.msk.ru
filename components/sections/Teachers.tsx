@@ -1,5 +1,6 @@
 import stls from '@/styles/components/sections/Teachers.module.sass'
 import { elementIds } from '@/config/index'
+import { getImageHeight } from '@/helpers/index'
 import Wrapper from '@/components/layout/Wrapper'
 import SwiperContainer from '@/components/general/SwiperContainer'
 import CardTeacher from '@/components/cards/CardTeacher'
@@ -19,14 +20,16 @@ const Teachers = () => {
     teachers.map(teacher => {
       teacher.image = (
         <ImgTeacher
-          src={teacher.portrait?.formats?.small?.url}
+          src={teacher?.portrait?.url}
           alt={teacher.name}
-          width={teacher.portrait?.formats?.small?.width}
-          height={teacher.portrait?.formats?.small?.height}
+          width={160}
+          height={getImageHeight({
+            width: 160,
+            widthInitial: teacher?.portrait?.width,
+            heightInitial: teacher?.portrait?.height
+          })}
         />
       )
-      // <ImgTeacher1 name='Иванов Иван Иванович' />
-      // item.formats.small.url
       return teacher
     })
 

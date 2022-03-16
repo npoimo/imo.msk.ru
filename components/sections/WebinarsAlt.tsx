@@ -1,5 +1,6 @@
 import stls from '@/styles/components/sections/WebinarsAlt.module.sass'
 import { elementIds } from '@/config/index'
+import { getImageHeight } from '@/helpers/index'
 import Wrapper from '@/components/layout/Wrapper'
 import classNames from 'classnames'
 import Popup from 'reactjs-popup'
@@ -35,12 +36,14 @@ const WebinarsAlt = ({ webinars = null }: WebinarsAltType) => {
                           name={webinar.name}
                           picture={
                             <ImgWebinar
-                              src={webinar.picture?.formats?.thumbnail?.url}
+                              src={webinar?.picture?.url}
                               alt={webinar.title}
-                              width={webinar.picture?.formats?.thumbnail?.width}
-                              height={
-                                webinar.picture?.formats?.thumbnail?.height
-                              }
+                              width={70}
+                              height={getImageHeight({
+                                width: 70,
+                                widthInitial: webinar?.picture?.width,
+                                heightInitial: webinar?.picture?.height
+                              })}
                             />
                           }
                           title={webinar.title}
