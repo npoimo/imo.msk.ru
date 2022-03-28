@@ -20,9 +20,9 @@ const GetDiplomaAndAccreditation = () => {
       <div className={stls.laptopdesktop}>
         <h3 className={stls.title}>
           {program?.category?.type !== 'course' &&
-            'Получаете диплом с аккредитациейкредитацией'}
+            'Получаете диплом с аккредитацией'}
           {program?.category?.type === 'course' &&
-            'Получаете удостоверение с аккредитацией'}
+            'Получаете удостоверение для прохождения аккредитации'}
         </h3>
         <p className={stls.subtitle}>
           {program?.category?.type !== 'course' &&
