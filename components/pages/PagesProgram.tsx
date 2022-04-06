@@ -39,10 +39,12 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
       {/* <YourDiploma ofType={ofType} /> */}
       <BriefProgramContents />
       <FullProgram />
-      {ofType !== 'course' && resumeTitle && entrySalary && resumeSkills && (
-        <YourResume />
-      )}
-      {ofType !== 'course' && <YourFutureJob />}
+      {ofType !== 'course' &&
+        ofType !== 'hmo' &&
+        resumeTitle &&
+        entrySalary &&
+        resumeSkills && <YourResume />}
+      {ofType !== 'course' && ofType !== 'hmo' && <YourFutureJob />}
       <Teachers />
       <Cta
         title={'Начните обучаться со скидкой'}
