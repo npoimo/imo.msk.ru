@@ -1,20 +1,26 @@
 import stls from '@/styles/components/imgs/webinars/ImgAllWebinars.module.sass'
-import Image from 'next/image'
-import pic from '@/public/assets/imgs/webinars/all-webinars.jpg'
+import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
+import cn from 'classnames'
+import { nextexport } from '@/config/index'
+import { ImgTemplate } from '@/components/imgs'
+import src from '@/public/assets/imgs/webinars/all-webinars.jpg'
 
-const ImgAllWebinars = ({ width = 0, height = 0 }) => {
+type TypeImgAllWebinars = TypeGeneralClassNames & TypeGeneralImg
+
+const ImgAllWebinars = ({ classNames, width, height }: TypeImgAllWebinars) => {
+  const publicSrc = '/assets/imgs/webinars/all-webinars.jpg'
+
   return (
-    <div className={stls.container}>
-      <Image
-        src={pic}
-        alt='Портрет 1'
-        className={stls.img}
-        width={width !== 0 && width}
-        height={height !== 0 && height}
+    <>
+      <ImgTemplate
+        classNames={[cn(stls.container, classNames)]}
+        src={nextexport ? publicSrc : src}
+        width={nextexport ? src.width : width}
+        height={nextexport ? src.height : height}
         objectFit='cover'
-        placeholder='blur'
+        alt='Портрет 1'
       />
-    </div>
+    </>
   )
 }
 

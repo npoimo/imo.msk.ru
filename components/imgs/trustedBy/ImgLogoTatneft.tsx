@@ -1,17 +1,25 @@
 import stls from '@/styles/components/imgs/trustedBy/ImgLogoTatneft.module.sass'
-import { TypeImg } from '@/types/index'
+import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
+import cn from 'classnames'
+import { nextexport } from '@/config/index'
 import { ImgTemplate } from '@/components/imgs'
 import src from '@/public/assets/imgs/trustedBy/logo-tatneft.jpg'
 
-const ImgLogoTatneft = ({ classNames = [], width, height }: TypeImg) => {
+type TypeImgLogoTatneft = TypeGeneralClassNames & TypeGeneralImg
+
+const ImgLogoTatneft = ({ classNames, width, height }: TypeImgLogoTatneft) => {
+  const publicSrc = '/assets/imgs/trustedBy/logo-tatneft.jpg'
+
   return (
-    <ImgTemplate
-      classNames={classNames}
-      src={src}
-      alt={'Tatneft'}
-      width={width}
-      height={height}
-    />
+    <>
+      <ImgTemplate
+        classNames={[cn(stls.container, classNames)]}
+        src={nextexport ? publicSrc : src}
+        width={nextexport ? src.width : width}
+        height={nextexport ? src.height : height}
+        alt={'Tatneft'}
+      />
+    </>
   )
 }
 

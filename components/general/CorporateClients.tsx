@@ -11,27 +11,27 @@ import {
 const clientsList = [
   {
     name: 'HeadHunter',
-    pic: <ImgHeadHunter name='HeadHunter' />
+    pic: <ImgHeadHunter />
   },
   {
     name: 'РосСети',
-    pic: <ImgRosSeti name='РосСети' />
+    pic: <ImgRosSeti />
   },
   {
     name: 'РосНефть',
-    pic: <ImgRosNeft name='РосНефть' />
+    pic: <ImgRosNeft />
   },
   {
     name: 'РЖД',
-    pic: <ImgRZHD name='РЖД' />
+    pic: <ImgRZHD />
   },
   {
     name: 'Министерство труда',
-    pic: <ImgMinistryOfLabor name='Министерство труда' />
+    pic: <ImgMinistryOfLabor />
   },
   {
     name: 'Сбербанк Лизинг',
-    pic: <ImgSberbankLeasing name='Сбербанк Лизинг' />
+    pic: <ImgSberbankLeasing />
   }
 ]
 

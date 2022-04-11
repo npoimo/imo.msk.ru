@@ -1,17 +1,37 @@
 import stls from '@/styles/components/imgs/webinars/ImgWebinar.module.sass'
+import {
+  TypeGeneralClassNames,
+  TypeGeneralImg,
+  TypeGeneralImgExtended
+} from '@/types/index'
+import cn from 'classnames'
+import { nextexport } from '@/config/index'
 import { ImgTemplate } from '@/components/imgs'
-import { TypeImg } from '@/types/index'
 import defaultSrc from '@/public/assets/imgs/reviews/review-default.png'
 
-const ImgWebinar = ({ classNames = [], src, alt, width, height }: TypeImg) => {
+type TypeImgWebinar = TypeGeneralClassNames &
+  TypeGeneralImg &
+  TypeGeneralImgExtended
+
+const ImgWebinar = ({
+  classNames,
+  src,
+  alt,
+  width,
+  height
+}: TypeImgWebinar) => {
+  const publicSrc = '/assets/imgs/reviews/review-default.png'
+
   return (
-    <ImgTemplate
-      classNames={classNames}
-      src={src || defaultSrc}
-      alt={alt || 'Спикер'}
-      width={width}
-      height={height}
-    />
+    <>
+      <ImgTemplate
+        classNames={[cn(stls.container, classNames)]}
+        src={src || (nextexport ? publicSrc : defaultSrc)}
+        width={nextexport ? defaultSrc.width : width}
+        height={nextexport ? defaultSrc.height : height}
+        alt={alt || 'Спикер'}
+      />
+    </>
   )
 }
 

@@ -1,19 +1,25 @@
 import stls from '@/styles/components/imgs/cta/ImgCta1.module.sass'
-import Image from 'next/image'
-import pic from '@/public/assets/imgs/cta/cta1.png'
+import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
+import cn from 'classnames'
+import { nextexport } from '@/config/index'
+import { ImgTemplate } from '@/components/imgs'
+import src from '@/public/assets/imgs/cta/cta1.png'
 
-const ImgCta1 = ({ width = 0, height = 0 }) => {
+type TypeImgCta1 = TypeGeneralClassNames & TypeGeneralImg
+
+const ImgCta1 = ({ classNames, width, height }: TypeImgCta1) => {
+  const publicSrc = '/assets/imgs/cta/cta1.png'
+
   return (
-    <div className={stls.container}>
-      <Image
-        src={pic}
+    <>
+      <ImgTemplate
+        classNames={[cn(stls.container, classNames)]}
+        src={nextexport ? publicSrc : src}
+        width={nextexport ? src.width : width}
+        height={nextexport ? src.height : height}
         alt='Девушка в очках и с книгой'
-        className={stls.img}
-        width={width !== 0 && width}
-        height={height !== 0 && height}
-        placeholder='blur'
       />
-    </div>
+    </>
   )
 }
 

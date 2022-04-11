@@ -1,19 +1,25 @@
 import stls from '@/styles/components/imgs/webinars/ImgPortrait2.module.sass'
-import Image from 'next/image'
-import pic from '@/public/assets/imgs/webinars/portrait2.jpg'
+import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
+import cn from 'classnames'
+import { nextexport } from '@/config/index'
+import { ImgTemplate } from '@/components/imgs'
+import src from '@/public/assets/imgs/webinars/portrait2.jpg'
 
-const ImgPortrait2 = ({ width = 0, height = 0 }) => {
+type TypeImgPortrait2 = TypeGeneralClassNames & TypeGeneralImg
+
+const ImgPortrait2 = ({ classNames, width, height }: TypeImgPortrait2) => {
+  const publicSrc = '/assets/imgs/webinars/portrait2.jpg'
+
   return (
-    <div className={stls.container}>
-      <Image
-        src={pic}
+    <>
+      <ImgTemplate
+        classNames={[cn(stls.container, classNames)]}
+        src={nextexport ? publicSrc : src}
+        width={nextexport ? src.width : width}
+        height={nextexport ? src.height : height}
         alt='Портрет 2'
-        className={stls.img}
-        width={width !== 0 && width}
-        height={height !== 0 && height}
-        placeholder='blur'
       />
-    </div>
+    </>
   )
 }
 

@@ -1,19 +1,24 @@
 import stls from '@/styles/components/imgs/corporateClients/ImgRZHD.module.sass'
-import Image from 'next/image'
-import pic from '@/public/assets/imgs/corporateClients/rZHD.jpg'
+import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
+import cn from 'classnames'
+import { nextexport } from '@/config/index'
+import { ImgTemplate } from '@/components/imgs'
+import src from '@/public/assets/imgs/corporateClients/rZHD.jpg'
 
-const ImgRZHD = ({ name, width = 0, height = 0 }) => {
+type TypeImgRZHD = TypeGeneralClassNames & TypeGeneralImg
+
+const ImgRZHD = ({ classNames, width, height }: TypeImgRZHD) => {
+  const publicSrc = '/assets/imgs/corporateClients/rZHD.jpg'
   return (
-    <div className={stls.container}>
-      <Image
-        src={pic}
-        alt={name}
-        className={stls.img}
-        width={width !== 0 && width}
-        height={height !== 0 && height}
-        placeholder='blur'
+    <>
+      <ImgTemplate
+        classNames={[cn(stls.container, classNames)]}
+        src={nextexport ? publicSrc : src}
+        width={nextexport ? src.width : width}
+        height={nextexport ? src.height : height}
+        alt={'РЖД'}
       />
-    </div>
+    </>
   )
 }
 

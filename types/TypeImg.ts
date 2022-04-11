@@ -1,6 +1,9 @@
+import { TypeClassNames } from '@/types/index'
+
 type TypeImg = {
-  classNames?: string[]
-  src?: StaticImageData | string
+  classNames?: TypeClassNames
+  // src?: StaticImageData | string // TODO: figure out better types
+  src?: any
   alt?: string
   width?: number
   height?: number

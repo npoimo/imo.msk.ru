@@ -1,19 +1,25 @@
 import stls from '@/styles/components/imgs/yourfuturejob/ImgDecoration1.module.sass'
-import Image from 'next/image'
-import pic from '@/public/assets/imgs/yourfuturejob/decoration1.jpg'
+import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
+import cn from 'classnames'
+import { nextexport } from '@/config/index'
+import { ImgTemplate } from '@/components/imgs'
+import src from '@/public/assets/imgs/yourfuturejob/decoration1.jpg'
 
-const ImgDecoration1 = ({ width = 0, height = 0 }) => {
+type TypeImgDecoration1 = TypeGeneralClassNames & TypeGeneralImg
+
+const ImgDecoration1 = ({ classNames, width, height }: TypeImgDecoration1) => {
+  const publicSrc = '/assets/imgs/yourfuturejob/decoration1.jpg'
+
   return (
-    <div className={stls.container}>
-      <Image
-        src={pic}
+    <>
+      <ImgTemplate
+        classNames={[cn(stls.container, classNames)]}
+        src={nextexport ? publicSrc : src}
+        width={nextexport ? src.width : width}
+        height={nextexport ? src.height : height}
         alt='Врач занимается с ребёнком'
-        className={stls.img}
-        width={width !== 0 && width}
-        height={height !== 0 && height}
-        placeholder='blur'
       />
-    </div>
+    </>
   )
 }
 

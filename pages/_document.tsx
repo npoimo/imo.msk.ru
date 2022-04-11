@@ -1,4 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document' // eslint-disable-line
+// TODO: figure out a bug above where the import is not working
 import { themeColor } from '@/config/index'
 import MetaFonts from '@/components/meta/MetaFonts'
 import MetaManifest from '@/components/meta/MetaManifest'

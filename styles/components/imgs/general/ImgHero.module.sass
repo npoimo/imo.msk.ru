@@ -3,14 +3,12 @@
 @use '@/styles/utils/mixin/media' as bp
 
 .container
-  height: 100%
+  // height: 100%
   overflow: hidden
   @include m.media(phone, tablet)
     border-top-left-radius: f.px(50)
   @include m.media(laptop, desktop)
     border-top-left-radius: f.px(100)
     border-bottom-left-radius: f.px(3)
-
-.img
   @include m.media(laptop)
     border-top-left-radius: f.px(100)

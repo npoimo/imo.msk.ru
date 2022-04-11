@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build & next export",
     "start": "next start",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "generateicons": "npx pwa-asset-generator ./public/assets/imgs/general/icon.png ./public/assets/imgs/icons -p \"0\" -b \"#0073A9\""
@@ -16,7 +17,7 @@
     "html-react-parser": "^1.4.0",
     "marked": "^3.0.8",
     "moment": "^2.29.1",
-    "next": "^12.1.0",
+    "next": "^12.1.4",
     "next-pwa": "^5.4.0",
     "next-secure-headers": "^2.2.0",
     "next-seo": "^4.28.1",

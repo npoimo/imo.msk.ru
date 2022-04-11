@@ -1,19 +1,25 @@
 import stls from '@/styles/components/imgs/programs/courses/ImgCourse2.module.sass'
-import Image from 'next/image'
-import pic from '@/public/assets/imgs/programs/courses/course-2.jpg'
+import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
+import cn from 'classnames'
+import { nextexport } from '@/config/index'
+import { ImgTemplate } from '@/components/imgs'
+import src from '@/public/assets/imgs/programs/courses/course-2.jpg'
 
-const ImgCourse2 = ({ width = 676, height = 0 }) => {
+type TypeImgCourse2 = TypeGeneralClassNames & TypeGeneralImg
+
+const ImgCourse2 = ({ classNames, width = 676, height }: TypeImgCourse2) => {
+  const publicSrc = '/assets/imgs/programs/courses/course-2.jpg'
+
   return (
-    <div className={stls.container}>
-      <Image
-        src={pic}
+    <>
+      <ImgTemplate
+        classNames={[cn(stls.container, classNames)]}
+        src={nextexport ? publicSrc : src}
+        width={nextexport ? src.width : width}
+        height={nextexport ? src.height : height}
         alt='ПП 2'
-        className={stls.img}
-        width={width !== 0 && width}
-        height={height !== 0 && height}
-        placeholder='blur'
       />
-    </div>
+    </>
   )
 }
 

@@ -1,37 +1,52 @@
 import stls from '@/styles/components/imgs/ImgTemplate.module.sass'
+import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
 import Image from 'next/image'
-import classnames from 'classnames'
+import cn from 'classnames'
+import { nextexport, base64pixel } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
-import { base64pixel } from '@/config/index'
 
-type ImgTemplateType = {
-  classNames?: string[]
-  src: StaticImageData | string
-  alt: string
-  width?: number
-  height?: number
-}
+type ImgTemplateType = TypeGeneralClassNames &
+  TypeGeneralImg & {
+    // readonly src: StaticImageData | string
+    readonly src: any // TODO: figure out better types here
+    readonly alt: string
+    readonly title?: string
+    readonly priority?: boolean
+    readonly unoptimized?: boolean
+    readonly objectFit?: 'cover' | 'contain' | 'fill' | 'none'
+  }
 
 const ImgTemplate = ({
-  classNames = [],
+  classNames,
   width,
   height,
   src,
-  alt
+  alt,
+  title,
+  priority,
+  unoptimized,
+  objectFit
 }: ImgTemplateType) => {
-  const container = getClassNames({ classNames })
+  const Tag = nextexport ? 'img' : Image
 
   return (
-    <div className={classnames([stls.container], container)}>
+    <div
+      className={
+        cn([stls.container], getClassNames({ classNames })) || undefined
+      }
+      title={title}>
       {src && (
-        <Image
+        <Tag
           src={src}
           alt={alt}
           width={width}
           height={height}
-          className={stls.img}
-          placeholder='blur'
-          blurDataURL={base64pixel}
+          className={cn(stls.img, { [stls.nextexport]: nextexport })}
+          {...(nextexport ? undefined : { placeholder: 'blur' })}
+          {...(nextexport ? undefined : { blurDataURL: base64pixel })}
+          {...(nextexport ? undefined : { priority })}
+          {...(nextexport ? undefined : { unoptimized })}
+          {...(nextexport ? undefined : { objectFit })}
         />
       )}
     </div>

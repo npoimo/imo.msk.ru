@@ -1,17 +1,25 @@
 import stls from '@/styles/components/imgs/trustedBy/ImgLogoGasprom.module.sass'
-import { TypeImg } from '@/types/index'
+import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
+import cn from 'classnames'
+import { nextexport } from '@/config/index'
 import { ImgTemplate } from '@/components/imgs'
 import src from '@/public/assets/imgs/trustedBy/logo-gasprom.jpg'
 
-const ImgLogoGasprom = ({ classNames = [], width, height }: TypeImg) => {
+type TypeImgLogoGasprom = TypeGeneralClassNames & TypeGeneralImg
+
+const ImgLogoGasprom = ({ classNames, width, height }: TypeImgLogoGasprom) => {
+  const publicSrc = '/assets/imgs/trustedBy/logo-gasprom.jpg'
+
   return (
-    <ImgTemplate
-      classNames={classNames}
-      src={src}
-      alt={'Газпром'}
-      width={width}
-      height={height}
-    />
+    <>
+      <ImgTemplate
+        classNames={[cn(stls.container, classNames)]}
+        src={nextexport ? publicSrc : src}
+        width={nextexport ? src.width : width}
+        height={nextexport ? src.height : height}
+        alt={'Газпром'}
+      />
+    </>
   )
 }
 

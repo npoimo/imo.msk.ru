@@ -1,24 +1,37 @@
 import stls from '@/styles/components/imgs/forWhom/ImgForWhomPhoneTablet.module.sass'
+import {
+  TypeGeneralClassNames,
+  TypeGeneralImg,
+  TypeGeneralImgExtended
+} from '@/types/index'
+import cn from 'classnames'
+import { nextexport } from '@/config/index'
 import { ImgTemplate } from '@/components/imgs'
-import { TypeImg } from '@/types/index'
 // import defaultSrc from '@/public/assets/imgs/forWhom/forWhom-phone-tablet.jpg'
 import defaultSrc from '@/public/assets/imgs/programs/courses/course-2.jpg'
 
+type TypeImgForWhomPhoneTablet = TypeGeneralClassNames &
+  TypeGeneralImg &
+  TypeGeneralImgExtended
+
 const ImgForWhomPhoneTablet = ({
-  classNames = [],
+  classNames,
   src,
   alt,
   width,
   height
-}: TypeImg) => {
+}: TypeImgForWhomPhoneTablet) => {
+  const publicSrc = '/assets/imgs/programs/courses/course-2.jpg'
   return (
-    <ImgTemplate
-      classNames={classNames}
-      src={defaultSrc}
-      alt={alt || 'Врач в работе'}
-      width={width}
-      height={height}
-    />
+    <>
+      <ImgTemplate
+        classNames={[cn(stls.container, classNames)]}
+        src={nextexport ? publicSrc : defaultSrc}
+        width={nextexport ? defaultSrc.width : width}
+        height={nextexport ? defaultSrc.height : height}
+        alt={alt || 'Врач в работе'}
+      />
+    </>
   )
 }
 

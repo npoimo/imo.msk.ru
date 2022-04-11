@@ -1,16 +1,22 @@
 import stls from '@/styles/components/imgs/diplomas/ImgSupplement.module.sass'
-import { TypeImg } from '@/types/index'
+import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
+import cn from 'classnames'
+import { nextexport } from '@/config/index'
 import { ImgTemplate } from '@/components/imgs'
-import pic from '@/public/assets/imgs/diplomas/supplement.jpg'
+import src from '@/public/assets/imgs/diplomas/supplement.jpg'
 
-const ImgSupplement = ({ classNames = [], width, height }: TypeImg) => {
+type TypeImgSupplement = TypeGeneralClassNames & TypeGeneralImg
+
+const ImgSupplement = ({ classNames, width, height }: TypeImgSupplement) => {
+  const publicSrc = '/assets/imgs/diplomas/supplement.jpg'
+
   return (
     <ImgTemplate
-      classNames={classNames}
-      src={pic}
-      alt='Приложение'
-      width={width}
-      height={height}
+      classNames={[cn(stls.container, classNames)]}
+      src={nextexport ? publicSrc : src}
+      width={nextexport ? src.width : width}
+      height={nextexport ? src.height : height}
+      alt={'Приложение'}
     />
   )
 }
