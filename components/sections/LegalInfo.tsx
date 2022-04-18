@@ -1,5 +1,5 @@
 import stls from '@/styles/components/sections/LegalInfo.module.sass'
-import { elementIds } from '@/config/index'
+import { elementIds, companyInfo } from '@/config/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { zipcode, city, streetAlt } from '@/data/location'
 import { number } from '@/data/contact'
@@ -9,16 +9,15 @@ const LegalInfo = () => {
   const listLeft = [
     {
       title: 'Полное наименование организации:',
-      content:
-        'АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ДОПОЛНИТЕЛЬНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ «ИНСТИТУТ МЕДИЦИНСКОГО ОБРАЗОВАНИЯ»'
+      content: companyInfo.fullName
     },
     {
       title: 'Сокращенное наименование образовательной организации:',
-      content: 'НАНО ДПО «ИМО»'
+      content: companyInfo.shortName
     },
     {
       title: 'Руководитель образовательной организации:',
-      content: 'Столяренко Марина Ивановна'
+      content: companyInfo.ceo
     },
     {
       title: 'Информация о месте нахождения образовательной организации:',
@@ -32,14 +31,14 @@ const LegalInfo = () => {
     },
     {
       title: 'ИНН организации:',
-      content: '9725041321'
+      content: companyInfo.iin
     }
   ]
   const listRight = [
     {
       title:
         'Информация о режиме и графике работы образовательной организации:',
-      content: 'ПН-ПТ с 09:00 до 18:00 (UTC/GTM + 3ч)'
+      content: companyInfo.workingHours
     },
     {
       title:
